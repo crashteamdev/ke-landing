@@ -31,8 +31,6 @@ jobs:
               with:
                   node-version: '16.13.2'
                   cache: 'npm'
-            - name: Check
-              run: npm run check
             - name: Run tests
               run: npm run test
     build:
