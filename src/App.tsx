@@ -5,6 +5,7 @@ import DeveloperScreen from "./components/developerForm";
 import FeaturesScreen from "./components/featuresScreen";
 import MainScreen from "./components/mainScreen";
 import Posts from "./components/postsScreen";
+import PresentationSlider from "./components/presentation";
 import ServicesScreen from "./components/services";
 import SubsScreen from "./components/subsScreen";
 import Layout from "./layouts";
@@ -15,12 +16,13 @@ const App: React.FC = () => {
         <Layout>
             <MainScreen title="Умная аналитика маркетплейсов" desc="Проанализируем каждый товар в покупках ваших клиентов, дадим точную статистику по каждому наименованию в вашем магазине" />
             <CompanySlider />
+            <PresentationSlider />
             <ServicesScreen />
             <AboutServicesScreen />
             <AboutScreen />
-            {/*
+
             <FeaturesScreen />
-            */}
+
             <SubsScreen />
             <Posts />
             <DeveloperScreen />
