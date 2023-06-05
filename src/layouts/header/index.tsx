@@ -3,6 +3,7 @@ import ArrowIcon from '../../components/icons/arrowIcon';
 import PhoneIcon from '../../components/icons/phoneIcon';
 import './style.scss';
 import CloseIcon from '../../components/icons/close';
+import { TelegramIcon } from '../../components/icons/socialIcons';
 
 
 interface IProps {
@@ -24,15 +25,15 @@ const Header: React.FC = ({ headerLayout }: IProps) => {
                             <a className='active' href="/">Главная</a>
                             <a href="/">
                                 Тарифы
-                                <ArrowIcon color="white" />
+                                {/* <ArrowIcon color="white" /> */}
                             </a>
                             <a href="/">О нас</a>
                         </div>
                     </div>
                     <div className="header-right">
-                        <a className='header-phone' href="+7 800 999 99 99">
-                            <PhoneIcon color="white" />
-                            +7 800 999 99 99
+                        <a className='header-phone' target='_blank' href="https://t.me/marketdbru">
+                            <TelegramIcon color="#fff" />
+                            Telegram
                         </a>
                         <a className='btn' href="/">Войти</a>
                     </div>

@@ -15,7 +15,7 @@ const App: React.FC = () => {
     return (
         <Layout>
             <MainScreen title="Умная аналитика маркетплейсов" desc="Проанализируем каждый товар в покупках ваших клиентов, дадим точную статистику по каждому наименованию в вашем магазине" />
-            <CompanySlider />
+            {/* <CompanySlider /> */}
             <PresentationSlider />
             <ServicesScreen />
             <AboutServicesScreen />
@@ -24,8 +24,8 @@ const App: React.FC = () => {
             <FeaturesScreen />
 
             <SubsScreen />
-            <Posts />
-            <DeveloperScreen />
+            {/* <Posts /> */}
+            {/* <DeveloperScreen /> */}
         </Layout>
     )
 }

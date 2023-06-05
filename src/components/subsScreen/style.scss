@@ -119,7 +119,7 @@
           &.active {
             color: #1a1a1a;
             &:before {
-              background: #28b87b;
+              background: #28b87b url('../../../public/images/icon/check.svg') no-repeat 4px 5px;
             }
           }
           &:before {
@@ -129,7 +129,7 @@
             border-radius: 50px;
             position: absolute;
             left: 0;
-            background: #dfdfdf;
+            background: #dfdfdf url('../../../public/images/icon/none.svg') no-repeat 5px 5px;
           }
         }
       }

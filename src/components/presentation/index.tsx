@@ -8,7 +8,7 @@ const PresentationSlider = () => {
 
     const swiperRef = useRef<SwiperType>();
     return (
-        <div className="presentation-slider">
+        <div className="presentation-slider" style={{ marginTop: "100px" }}>
             <div className="container">
                 <div className="title">Инструменты аналитики</div>
                 <Swiper

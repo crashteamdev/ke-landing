@@ -6,6 +6,29 @@ const SubsScreen = () => {
 
     const [threeMonth, setThreeMonth] = useState(false);
 
+    const data = [
+        {
+            title: "Бесплатный",
+            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            price: 0,
+        },
+        {
+            title: "Базовый",
+            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            price: 1470,
+        },
+        {
+            title: "Расширенный",
+            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            price: 2190,
+        },
+        {
+            title: "Продвинутый",
+            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            price: 3200,
+        }
+    ]
+
     return (
         <div className="subs-screen">
             {/* <div className="circle-bg" style={{
@@ -50,159 +73,31 @@ const SubsScreen = () => {
                         }
                     }}
                 >
-                    <SwiperSlide className="subs-item">
-                        <div className="subs-item__title">Бесплатный</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>Free</span>
-                            {!threeMonth ?
-                                <div className="subs-item__name--date"> / месяц</div>
-                                :
-                                <div className="subs-item__name--date"> / 3 месяца</div>
-                            }
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </SwiperSlide>
-                    <SwiperSlide className="subs-item">
-                        <div className="subs-item__title">Базовый</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>800₽</span>
-                            <div className="subs-item__name--date"> / месяц</div>
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </SwiperSlide>
-                    <SwiperSlide className="subs-item">
-                        <div className="subs-item-popular btn btn--orange">Популярный</div>
-                        <div className="subs-item__title">Расширенный</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>Free</span>
-                            <div className="subs-item__name--date"> / месяц</div>
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </SwiperSlide>
-                    <SwiperSlide className="subs-item">
-                        <div className="subs-item__title">Профессиональный</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>Free</span>
-                            <div className="subs-item__name--date"> / месяц</div>
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </SwiperSlide>
+                    {data.map(item => (
+                        <SwiperSlide className="subs-item">
+                            <div className="subs-item__title">{item.title}</div>
+                            <div className="subs-item__desc">{item.desc}</div>
+                            <div className="subs-item__name">
+                                <span>{!threeMonth ? item.price : item.price}₽</span>
+                                {!threeMonth ?
+                                    <div className="subs-item__name--date"> / месяц</div>
+                                    :
+                                    <div className="subs-item__name--date"> / 3 месяца</div>
+                                }
+                            </div>
+                            <div className="subs-advantages">
+                                <div className="subs-advantages__item active">Внешняя аналитика</div>
+                                <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
+                                <div className="subs-advantages__item">SEO-оптимизация</div>
+                                <div className="subs-advantages__item">События</div>
+                                <div className="subs-advantages__item">Внутреняя аналитика</div>
+                                <div className="subs-advantages__item">Планировщик поставок</div>
+                                <div className="subs-advantages__item">События</div>
+                            </div>
+                            <a href="#" className='btn btn--orange'>Попробовать</a>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
-                {/* <div className="subs-list">
-                    <div className="subs-item">
-                        <div className="subs-item__title">Бесплатный</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>Free</span>
-                            <div className="subs-item__name--date"> / месяц</div>
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </div>
-                    <div className="subs-item">
-                        <div className="subs-item__title">Базовый</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>800₽</span>
-                            <div className="subs-item__name--date"> / месяц</div>
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </div>
-                    <div className="subs-item">
-                        <div className="subs-item-popular btn btn--orange">Популярный</div>
-                        <div className="subs-item__title">Расширенный</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>Free</span>
-                            <div className="subs-item__name--date"> / месяц</div>
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </div>
-                    <div className="subs-item">
-                        <div className="subs-item__title">Профессиональный</div>
-                        <div className="subs-item__desc">Проанализируем каждый товар в покупках ваших клиентов</div>
-                        <div className="subs-item__name">
-                            <span>Free</span>
-                            <div className="subs-item__name--date"> / месяц</div>
-                        </div>
-                        <div className="subs-advantages">
-                            <div className="subs-advantages__item active">Внешняя аналитика</div>
-                            <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                            <div className="subs-advantages__item">SEO-оптимизация</div>
-                            <div className="subs-advantages__item">События</div>
-                            <div className="subs-advantages__item">Внутреняя аналитика</div>
-                            <div className="subs-advantages__item">Планировщик поставок</div>
-                            <div className="subs-advantages__item">События</div>
-                        </div>
-                        <a href="#" className='btn btn--orange'>Попробовать</a>
-                    </div>
-                </div> */}
             </div>
         </div>
     )

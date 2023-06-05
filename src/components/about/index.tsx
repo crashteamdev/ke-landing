@@ -8,30 +8,30 @@ const AboutScreen = () => {
                     <div className='about-screen-content'>
                         <div className="title">О сервисе</div>
                         <div className="desc">
-                            <p>KazanExpress.ru - это торговая площадка, на которой представлены наиболее выгодные китайские и российские товары с бесплатной доставкой за один день.</p>
-                            <p>Заказы приходят на фирменные пункты выдачи с примерочными. Если вам не подойдет размер или не понравится качество товара, его можно вернуть при получении или в течение 7 дней.</p>
-                            <p>Доставка осуществляется только в города с наличием собственных пунктов выдачи. Их количество растет ежемесячно.</p>
+                            <p>MarketDB - это комплекс сервисов для аналитики и автоизменение цен ваших товаров.</p>
+                            <p>Мы работаем с конца 2021 года, за это время нашей аналитикой воспользовалось более 3 000 тыс продавцов с Россиии и Узбекистана!</p>
+                            <p>Сервис работает на основе расширения для браузеров и не имеет веб-приложения для аналитики. </p>
                         </div>
                     </div>
                     <div className='about-screen-number'>
                         <div>
                             <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>8 965</div>
-                                <div className='about-screen-number-item__desc'>Средний оборот селлеров, ₽</div>
+                                <div className='about-screen-number-item__title'>1,5 млн +</div>
+                                <div className='about-screen-number-item__desc'>Товаров ежедневно<br />анализируется</div>
                             </div>
                             <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>978</div>
-                                <div className='about-screen-number-item__desc'>Клиентов</div>
+                                <div className='about-screen-number-item__title'>От 3 тыс</div>
+                                <div className='about-screen-number-item__desc'>Клиентов уже использовали<br /> аналитику marketdb</div>
                             </div>
                         </div>
                         <div>
                             <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>70,5</div>
+                                <div className='about-screen-number-item__title'>61,5%</div>
                                 <div className='about-screen-number-item__desc'>Средний рост выручки, %</div>
                             </div>
                             <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>99</div>
-                                <div className='about-screen-number-item__desc'>Точность аналитики, %</div>
+                                <div className='about-screen-number-item__title'>8 тыс +</div>
+                                <div className='about-screen-number-item__desc'>Категорий ежедневно<br />собираем</div>
                             </div>
                         </div>
                     </div>

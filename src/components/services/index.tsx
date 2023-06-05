@@ -5,43 +5,45 @@ interface IProps {
     desc: string
 }
 
-
+const data = [
+    {
+        title: "Легко начать",
+        desc: "Наша цель предоставить удобный и простой в понимании инструмент аналитики.",
+        icon: "services-2.png"
+    },
+    {
+        title: "Достоверная аналитика",
+        desc: "Предоставляем клиентам наиболее близкую к реальности внешнюю аналитику.",
+        icon: "services-1.png"
+    },
+    {
+        title: "Современные IT решения",
+        desc: "Для нашей аналитики мы используем только передовые IT технологии.",
+        icon: "services-2.png"
+    },
+    {
+        title: "Доступные цены",
+        desc: "С нами легко начать изучать рынок и не переплачивать за монструозные и дорогие аналоги.",
+        icon: "services-1.png"
+    },
+]
 
 const ServicesScreen = () => {
     return (
         <div className="services-screen">
             <div className="container">
-                <div className="title">Какие задачи решает сервис?</div>
+                <div className="title">Наши преимущества</div>
                 <div className="desc">Проанализируем каждый товар </div>
                 <div className="services-list">
-                    <div className="services-item">
-                        <div className="services-item__icon">
-                            <img src="./images/icon/services-2.png" alt="" />
+                    {data.map(item => (
+                        <div className="services-item">
+                            <div className="services-item__icon">
+                                <img src={`./images/icon/${item.icon}`} alt="" />
+                            </div>
+                            <div className="services-item__title">{item.title}</div>
+                            <div className="services-item__desc">{item.desc}</div>
                         </div>
-                        <div className="services-item__title">Изучение рынка</div>
-                        <div className="services-item__desc">Проанализируем каждый товар в покупках ваших клиентов, дадим точную статистику </div>
-                    </div>
-                    <div className="services-item">
-                        <div className="services-item__icon">
-                            <img src="./images/icon/services-1.png" alt="" />
-                        </div>
-                        <div className="services-item__title">Аналитика конкурентов</div>
-                        <div className="services-item__desc">Проанализируем каждый товар в покупках ваших клиентов, дадим точную статистику </div>
-                    </div>
-                    <div className="services-item">
-                        <div className="services-item__icon">
-                            <img src="./images/icon/services-2.png" alt="" />
-                        </div>
-                        <div className="services-item__title">Изучение рынка</div>
-                        <div className="services-item__desc">Проанализируем каждый товар в покупках ваших клиентов, дадим точную статистику </div>
-                    </div>
-                    <div className="services-item">
-                        <div className="services-item__icon">
-                            <img src="./images/icon/services-1.png" alt="" />
-                        </div>
-                        <div className="services-item__title">Аналитика конкурентов</div>
-                        <div className="services-item__desc">Проанализируем каждый товар в покупках ваших клиентов, дадим точную статистику </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
