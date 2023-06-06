@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 * {
   padding: 0;
   margin: 0;
@@ -48,6 +48,7 @@ body {
   text-align: center;
   color: #ffffff;
   padding: 12px 22px 14px;
+  cursor: pointer;
   &--orange {
     background: #fb943c;
   }
@@ -143,4 +144,3 @@ body {
     }
   }
 }
-

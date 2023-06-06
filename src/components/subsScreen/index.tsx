@@ -9,23 +9,54 @@ const SubsScreen = () => {
     const data = [
         {
             title: "Бесплатный",
-            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            desc: "Тариф выдается автоматически! Навсегда!",
             price: 0,
+            list: [
+                {title: 'Доступ к расширению'},
+                {title: '3 дня периода аналитики'},
+                {title: 'История позиций товара'},
+                {title: 'Возможные конкурентные товары'},
+            ]
         },
         {
             title: "Базовый",
-            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            desc: "Тариф подходит для начинающих продавцов",
             price: 1470,
+            list: [
+                {title: 'Доступ к расширению'},
+                {title: '30 дней периода аналитики'},
+                {title: 'История позиций товара'},
+                {title: 'Возможные конкурентные товары'},
+                {title: '3 отчета по магазинам в сутки'}
+            ]
         },
         {
             title: "Расширенный",
-            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            desc: "Тариф используют уже действующие продавцы для улучшения ассортимента",
             price: 2190,
+            list: [
+                {title: 'Доступ к расширению'},
+                {title: '30 / 60 / 90 дней периода аналитики'},
+                {title: 'История позиций товара'},
+                {title: 'Возможные конкурентные товары'},
+                {title: '6 отчетов Excel по магазинам в сутки'},
+                {title: '2 отчета Excel по категориям в сутки'},
+                {title: 'Приоритетная поддержка'},
+            ]
         },
         {
             title: "Продвинутый",
-            desc: "Проанализируем каждый товар в покупках ваших клиентов",
+            desc: "Максимальный тариф для продвинутых продавцов",
             price: 3200,
+            list: [
+                {title: 'Доступ к расширению'},
+                {title: '30 / 60 / 90 дней периода аналитики'},
+                {title: 'История позиций товара'},
+                {title: 'Возможные конкурентные товары'},
+                {title: '15 отчетов Excel по магазинам в сутки'},
+                {title: '4 отчета Excel по категориям в сутки'},
+                {title: 'Приоритетная поддержка'},
+            ]
         }
     ]
 
@@ -38,7 +69,7 @@ const SubsScreen = () => {
                 backgroundSize: "100%"
             }}></div> */}
             <div className="container">
-                <div className="subs-screen-row">
+                <div className="subs-screen-row" id="tariff">
                     <div className="title">Тарифы</div>
                     <div className="tabs">
                         <div className={!threeMonth ? 'tabs-item active' : 'tabs-item'} onClick={() => setThreeMonth(!threeMonth)}>
@@ -86,13 +117,16 @@ const SubsScreen = () => {
                                 }
                             </div>
                             <div className="subs-advantages">
-                                <div className="subs-advantages__item active">Внешняя аналитика</div>
+                                {item.list.map(itemSubs => (
+                                    <div className="subs-advantages__item active">{itemSubs.title}</div>
+                                ))}
+                                {/* <div className="subs-advantages__item active">Внешняя аналитика</div>
                                 <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
                                 <div className="subs-advantages__item">SEO-оптимизация</div>
                                 <div className="subs-advantages__item">События</div>
                                 <div className="subs-advantages__item">Внутреняя аналитика</div>
                                 <div className="subs-advantages__item">Планировщик поставок</div>
-                                <div className="subs-advantages__item">События</div>
+                                <div className="subs-advantages__item">События</div> */}
                             </div>
                             <a href="#" className='btn btn--orange'>Попробовать</a>
                         </SwiperSlide>

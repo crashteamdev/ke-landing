@@ -1,5 +1,5 @@
 import './style.scss';
-
+import { Link, animateScroll as scroll } from "react-scroll";
 interface IProps {
     title: string,
     desc: string
@@ -16,8 +16,17 @@ const MainScreen = ({ title, desc }: IProps) => {
                         <div className="main-screen-title">Аналитика KazanExpress</div>
                         <div className="main-screen-desc">Сервис аналитики KazanExpress на основе браузерного расширения для Chome, Opera, Mozzila и Яндекс браузер.</div>
                         <div className="main-screen-btn-list">
-                            <a href="#" className='btn btn--orange'>Попробовать бесплатно</a>
-                            <a href="#" className='btn'>Узнать тарифы</a>
+                            <a href="https://lk.marketdb.ru/" className='btn btn--orange'>Попробовать бесплатно</a>
+                            <Link
+                                className='btn'
+                                to="tariff"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                Узнать тарифы
+                            </Link>
                         </div>
                     </div>
                     <div className='main-screen-img'>

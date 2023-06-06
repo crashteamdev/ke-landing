@@ -3,6 +3,7 @@ import PhoneIcon from '../../components/icons/phoneIcon';
 import { VkIcon } from '../../components/icons/socialIcons';
 import { TelegramIcon } from '../../components/icons/socialIcons';
 import './style.scss';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 interface IProps {
     footerLayout?: 1 | 2;
@@ -17,10 +18,10 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                         <img src="./images/logo.svg" alt="" />
                     </a>
                     <div className="social-link">
-                        <a href="#">
+                        <a target='_blank' href="https://t.me/marketdbru">
                             <TelegramIcon color='white' />
                         </a>
-                        <a href="#">
+                        <a target='_blank' href="https://vk.com/markdbru">
                             <VkIcon color="white" />
                         </a>
                     </div>
@@ -28,10 +29,28 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                 <div className="footer-bottom">
                     <div className="footer-bottom-menu">
                         <a href="/">Главная</a>
-                        <a href="/">Тарифы</a>
-                        <a href="/">О нас</a>
+                        <Link
+                                activeClass="active"
+                                to="tariff"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Тарифы
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                О нас
+                            </Link>
                     </div>
-                    <div className="footer-bottom-contacts">
+                    {/* <div className="footer-bottom-contacts">
                         <a href="mailto:info-email@marketbd.ru">
                             <MailIcon color='white' />
                             info@marketbd.ru
@@ -40,7 +59,7 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                             <PhoneIcon color="white" />
                             8 800 999 99 99
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="footer-bottom-line"></div>

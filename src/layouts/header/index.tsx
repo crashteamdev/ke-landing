@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 import ArrowIcon from '../../components/icons/arrowIcon';
 import PhoneIcon from '../../components/icons/phoneIcon';
 import './style.scss';
@@ -23,11 +24,26 @@ const Header: React.FC = ({ headerLayout }: IProps) => {
                         </a>
                         <div className="header-menu">
                             <a className='active' href="/">Главная</a>
-                            <a href="/">
+                            <Link
+                                activeClass="active"
+                                to="tariff"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
                                 Тарифы
-                                {/* <ArrowIcon color="white" /> */}
-                            </a>
-                            <a href="/">О нас</a>
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                О нас
+                            </Link>
                         </div>
                     </div>
                     <div className="header-right">
@@ -35,7 +51,7 @@ const Header: React.FC = ({ headerLayout }: IProps) => {
                             <TelegramIcon color="#fff" />
                             Telegram
                         </a>
-                        <a className='btn' href="/">Войти</a>
+                        <a className='btn' href="https://lk.marketdb.ru/">Войти</a>
                     </div>
                     <div className="header-burger" onClick={() => setBurger(true)}>
                         <span></span>
@@ -62,11 +78,11 @@ const Header: React.FC = ({ headerLayout }: IProps) => {
                         </div>
                     </div>
                     <div className="header-mob-menu-bottom">
-                        <a href="tel:+7 800 999 99 99" className='header-mob-menu-phone'>
-                            <PhoneIcon color='#1A1A1A' />
-                            +7 800 999 99 99
+                        <a target='_blank' href="https://t.me/marketdbru" className='header-mob-menu-phone'>
+                            <TelegramIcon color="#fff" />
+                            Telegram
                         </a>
-                        <a href="/" className="btn">Войти</a>
+                        <a href="https://lk.marketdb.ru/" className="btn">Войти</a>
                     </div>
                 </div>
             }

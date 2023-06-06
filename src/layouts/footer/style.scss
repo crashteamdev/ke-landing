@@ -2,7 +2,7 @@
   background: #1a1a1a;
   padding-top: 39px;
   padding-bottom: 30px;
-  @media(max-width: 475px) {
+  @media (max-width: 475px) {
     padding-top: 30px;
   }
   &-top {
@@ -11,7 +11,7 @@
     justify-content: space-between;
     margin-bottom: 30px;
     &-logo {
-      @media(max-width: 475px) {
+      @media (max-width: 475px) {
         width: 100%;
         max-width: 107px;
       }
@@ -22,6 +22,7 @@
       a {
         margin-right: 20px;
         display: block;
+        cursor: pointer;
         &:last-child {
           margin-right: 0;
         }
@@ -32,11 +33,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       flex-wrap: wrap;
       gap: 20px;
     }
-    @media(max-width: 475px) {
+    @media (max-width: 475px) {
       flex-wrap: nowrap;
       align-items: baseline;
       justify-content: space-between;
@@ -47,8 +48,9 @@
       font-size: 16px;
       line-height: 140%;
       color: #ffffff;
+      cursor: pointer;
       display: block;
-      @media(max-width: 475px) {
+      @media (max-width: 475px) {
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
@@ -63,7 +65,7 @@
     &-menu {
       display: flex;
       align-items: center;
-      @media(max-width: 475px) {
+      @media (max-width: 475px) {
         flex-direction: column;
         align-items: baseline;
         position: relative;
@@ -71,7 +73,7 @@
       }
       a {
         margin-right: 50px;
-        @media(max-width: 475px) {
+        @media (max-width: 475px) {
           margin-right: 0;
         }
       }
@@ -79,10 +81,10 @@
     &-contacts {
       display: flex;
       align-items: center;
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
         flex-wrap: wrap;
       }
-      @media(max-width: 475px) {
+      @media (max-width: 475px) {
         align-items: end;
         flex-direction: column;
       }
@@ -90,7 +92,7 @@
         display: flex;
         align-items: center;
         margin-right: 20px;
-        @media(max-width: 475px) {
+        @media (max-width: 475px) {
           margin-right: 0px;
         }
         svg {
@@ -109,7 +111,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       flex-wrap: wrap;
       gap: 20px;
       flex-direction: column-reverse;
@@ -125,7 +127,7 @@
   }
   &-copyright-link {
     display: flex;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       flex-wrap: wrap;
       gap: 10px;
     }
@@ -137,7 +139,7 @@
       color: #959595;
       display: block;
       margin-right: 30px;
-      @media(max-width: 475px) {
+      @media (max-width: 475px) {
         margin-right: 0;
         width: 100%;
         max-width: 240px;

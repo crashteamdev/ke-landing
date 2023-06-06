@@ -12,7 +12,7 @@ const FeaturesScreen = () => {
                             <div className='features-list-item-content'>
                                 <div className="features-list-item__title">Изучение рынка<br />и потребностей клиентов<br />и других факторов</div>
                                 <div className="features-list-item__desc">Нейронная сеть MarketDB<br /> анализирует нишу по сотне<br />параметров и выдаёт оценку<br /> и рекомендации</div>
-                                <a href="/" className="features-list-item__link">Попробовать бесплатно</a>
+                                <a href="https://lk.marketdb.ru/" className="features-list-item__link">Попробовать бесплатно</a>
                             </div>
                             <img src="./images/features-1.png" alt="" />
                         </div>
@@ -21,7 +21,7 @@ const FeaturesScreen = () => {
                             <div className='features-list-item-content'>
                                 <div className="features-list-item__title">Изучение рынкаи потребностей клиентов и других факторов</div>
                                 <div className="features-list-item__desc">Нейронная сеть MarketDB анализирует нишу по сотне параметров и выдаёт оценку и рекомендации</div>
-                                <a href="/" className="features-list-item__link">Попробовать бесплатно</a>
+                                <a href="https://lk.marketdb.ru/" className="features-list-item__link">Попробовать бесплатно</a>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ const FeaturesScreen = () => {
                         <div className="features-list-item">
                             <div className="features-list-item__title">Изучение рынкаи потребностей клиентов и других факторов</div>
                             <div className="features-list-item__desc">Нейронная сеть MarketDB анализирует нишу по сотне параметров и выдаёт оценку и рекомендации</div>
-                            <a href="/" className="features-list-item__link">Попробовать бесплатно</a>
+                            <a href="https://lk.marketdb.ru/" className="features-list-item__link">Попробовать бесплатно</a>
                             <img src="./images/features-3.png" alt="" />
                         </div>
                     </div>

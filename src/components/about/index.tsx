@@ -2,7 +2,7 @@ import './style.scss';
 
 const AboutScreen = () => {
     return (
-        <div className="about-screen">
+        <div className="about-screen" id="about">
             <div className="container">
                 <div className="row">
                     <div className='about-screen-content'>
