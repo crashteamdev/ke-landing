@@ -41,6 +41,12 @@ const PresentationSlider = () => {
                     slidesPerView={1}
                     className="presentation-swiper"
                     effect="fade"
+                    onBeforeInit={(swiper) => {
+                        swiperRef.current = swiper;
+                    }}
+                    pagination={{
+                        clickable: true
+                    }}
                 >
                     {data.map(item => (
                         <SwiperSlide className='presentation-swiper-item'>

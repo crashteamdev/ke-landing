@@ -21,7 +21,7 @@ const App: React.FC = () => {
             <AboutServicesScreen />
             <AboutScreen />
 
-            <FeaturesScreen />
+            {/* <FeaturesScreen /> */}
 
             <SubsScreen />
             {/* <Posts /> */}

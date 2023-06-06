@@ -11,6 +11,9 @@ const SubsScreen = () => {
             title: "Бесплатный",
             desc: "Тариф выдается автоматически! Навсегда!",
             price: 0,
+            months: threeMonth ? 3 : '',
+            diccountMath: 0,
+            free: true,
             list: [
                 {title: 'Доступ к расширению'},
                 {title: '3 дня периода аналитики'},
@@ -22,6 +25,10 @@ const SubsScreen = () => {
             title: "Базовый",
             desc: "Тариф подходит для начинающих продавцов",
             price: 1470,
+            discount: 10,
+            diccountMath: 0.10,
+            free: false,
+            months: threeMonth ? 3 : '',
             list: [
                 {title: 'Доступ к расширению'},
                 {title: '30 дней периода аналитики'},
@@ -34,6 +41,10 @@ const SubsScreen = () => {
             title: "Расширенный",
             desc: "Тариф используют уже действующие продавцы для улучшения ассортимента",
             price: 2190,
+            discount: 15,
+            diccountMath: 0.15,
+            free: false,
+            months: threeMonth ? 3 : '',
             list: [
                 {title: 'Доступ к расширению'},
                 {title: '30 / 60 / 90 дней периода аналитики'},
@@ -48,6 +59,10 @@ const SubsScreen = () => {
             title: "Продвинутый",
             desc: "Максимальный тариф для продвинутых продавцов",
             price: 3200,
+            discount: 20,
+            diccountMath: 0.20,
+            free: false,
+            months: threeMonth ? 3 : '',
             list: [
                 {title: 'Доступ к расширению'},
                 {title: '30 / 60 / 90 дней периода аналитики'},
@@ -109,7 +124,8 @@ const SubsScreen = () => {
                             <div className="subs-item__title">{item.title}</div>
                             <div className="subs-item__desc">{item.desc}</div>
                             <div className="subs-item__name">
-                                <span>{!threeMonth ? item.price : item.price}₽</span>
+                                {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>0</span>}
+                                
                                 {!threeMonth ?
                                     <div className="subs-item__name--date"> / месяц</div>
                                     :
