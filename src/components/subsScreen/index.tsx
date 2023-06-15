@@ -144,7 +144,7 @@ const SubsScreen = () => {
                                 <div className="subs-advantages__item">Планировщик поставок</div>
                                 <div className="subs-advantages__item">События</div> */}
                             </div>
-                            <a href="#" className='btn btn--orange'>Попробовать</a>
+                            <a href="https://lk.marketdb.ru/" className='btn btn--orange'>Попробовать</a>
                         </SwiperSlide>
                     ))}
                 </Swiper>

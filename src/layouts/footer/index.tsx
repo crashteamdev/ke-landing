@@ -49,6 +49,9 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                             >
                                 О нас
                             </Link>
+                            <a href="https://vk.cc/coPhwU">
+                                Расширение
+                            </a>
                     </div>
                     {/* <div className="footer-bottom-contacts">
                         <a href="mailto:info-email@marketbd.ru">
