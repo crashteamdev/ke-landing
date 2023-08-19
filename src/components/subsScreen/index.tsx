@@ -121,28 +121,27 @@ const SubsScreen = () => {
                 >
                     {data.map(item => (
                         <SwiperSlide className="subs-item">
-                            <div className="subs-item__title">{item.title}</div>
-                            <div className="subs-item__desc">{item.desc}</div>
-                            <div className="subs-item__name">
-                                {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>0</span>}
-                                
-                                {!threeMonth ?
-                                    <div className="subs-item__name--date"> / месяц</div>
-                                    :
-                                    <div className="subs-item__name--date"> / 3 месяца</div>
-                                }
-                            </div>
-                            <div className="subs-advantages">
-                                {item.list.map(itemSubs => (
-                                    <div className="subs-advantages__item active">{itemSubs.title}</div>
-                                ))}
-                                {/* <div className="subs-advantages__item active">Внешняя аналитика</div>
-                                <div className="subs-advantages__item active">Сравнительный анализ категорий</div>
-                                <div className="subs-advantages__item">SEO-оптимизация</div>
-                                <div className="subs-advantages__item">События</div>
-                                <div className="subs-advantages__item">Внутреняя аналитика</div>
-                                <div className="subs-advantages__item">Планировщик поставок</div>
-                                <div className="subs-advantages__item">События</div> */}
+                            <div>
+                                <div className="subs-item__title">{item.title}</div>
+                                <div className="subs-item__desc">{item.desc}</div>
+                                <div className="subs-item__name">
+
+                                    {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>Бесплатно</span>}
+                                    
+                                    {!item.free && (
+                                        !threeMonth ?
+                                            (<div className="subs-item__name--date"> / месяц</div>)
+                                            :
+                                            (<div className="subs-item__name--date"> / 3 месяца</div>)
+                                        )
+                                    }
+
+                                </div>
+                                <div className="subs-advantages">
+                                    {item.list.map(itemSubs => (
+                                        <div className="subs-advantages__item active">{itemSubs.title}</div>
+                                    ))}
+                                </div>
                             </div>
                             <a href="https://lk.marketdb.ru/" className='btn btn--orange'>Попробовать</a>
                         </SwiperSlide>
