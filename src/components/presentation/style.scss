@@ -91,5 +91,21 @@
         margin-bottom: 32px;
       }
     }
+    .swiper-pagination {
+      display: flex;
+      column-gap: 5px;
+      padding: 0 40px;
+      bottom: 40px;
+      &-bullet {
+        width: 100%;
+        height: 3px;
+        opacity: 0.1;
+        background: #fff;
+        border-radius: 5px;
+        &-active {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
