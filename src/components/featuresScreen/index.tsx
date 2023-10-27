@@ -1,6 +1,6 @@
 import './style.scss';
 
-const FeaturesScreen = () => {
+const FeaturesScreen: React.FC = () => {
     return (
         <div className="features-screen">
             <div className="container">
@@ -16,14 +16,14 @@ const FeaturesScreen = () => {
                             </div>
                             <img src="./images/features-1.png" alt="" />
                         </div>
-                        {/* <div className="features-list-item features-list-item--blue">
+                        <div className="features-list-item features-list-item--blue">
                             <img src="./images/features-2.png" alt="" />
                             <div className='features-list-item-content'>
                                 <div className="features-list-item__title">Изучение рынкаи потребностей клиентов и других факторов</div>
                                 <div className="features-list-item__desc">Нейронная сеть MarketDB анализирует нишу по сотне параметров и выдаёт оценку и рекомендации</div>
                                 <a href="https://lk.marketdb.ru/" className="features-list-item__link">Попробовать бесплатно</a>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                     <div className='features-list-column'>
                         <div className="features-list-item">

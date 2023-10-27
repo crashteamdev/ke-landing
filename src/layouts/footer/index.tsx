@@ -3,7 +3,7 @@ import PhoneIcon from '../../components/icons/phoneIcon';
 import { VkIcon } from '../../components/icons/socialIcons';
 import { TelegramIcon } from '../../components/icons/socialIcons';
 import './style.scss';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 interface IProps {
     footerLayout?: 1 | 2;
@@ -18,10 +18,10 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                         <img src="./images/logo.svg" alt="" />
                     </a>
                     <div className="social-link">
-                        <a target='_blank' href="https://t.me/marketdbru">
+                        <a target='_blank' rel="noreferrer" href="https://t.me/marketdbru">
                             <TelegramIcon color='white' />
                         </a>
-                        <a target='_blank' href="https://vk.com/markdbru">
+                        <a target='_blank' rel="noreferrer" href="https://vk.com/markdbru">
                             <VkIcon color="white" />
                         </a>
                     </div>
@@ -53,7 +53,7 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                                 Расширение
                             </a>
                     </div>
-                    {/* <div className="footer-bottom-contacts">
+                    <div className="footer-bottom-contacts">
                         <a href="mailto:info-email@marketbd.ru">
                             <MailIcon color='white' />
                             info@marketbd.ru
@@ -62,7 +62,7 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                             <PhoneIcon color="white" />
                             8 800 999 99 99
                         </a>
-                    </div> */}
+                    </div>
                 </div>
             </div>
             <div className="footer-bottom-line"></div>
@@ -70,8 +70,8 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                 <div className="footer-copyright-row">
                     <span>@MarketDB</span>
                     <div className='footer-copyright-link'>
-                        <a href="">Политика  конфиденциальности и обработки данных</a>
-                        <a href="">Политика возврата</a>
+                        <a href="/privacy">Политика  конфиденциальности и обработки данных</a>
+                        <a href="/policy">Политика возврата</a>
                     </div>
                 </div>
             </div>
