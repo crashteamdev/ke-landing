@@ -149,3 +149,15 @@
     }
   }
 }
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000152;
+  a {
+    color: #fff;
+    padding: 5px 0;
+    font-weight: bold;
+  }
+}
