@@ -1,20 +1,21 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { Link  } from "react-scroll";
 import './style.scss';
 import CloseIcon from '../../components/icons/close';
 import { TelegramIcon } from '../../components/icons/socialIcons';
+import clsx from 'clsx';
 
 
 interface IProps {
-    headerLayout?: 1 | 2;
+    className?: string;
 }
 
-const Header: React.FC = ({ headerLayout }: IProps) => {
+const Header: FC = ({ className }: IProps) => {
     const [burger, setBurger] = useState(false);
     return (
         <>
             {/* <div className='top-bar'><a href="https://t.me/marketdbru/51" target='_blank'>Приглашаем на бесплатный вебинар «Знакомство с MarketDB» 5 ноября. Жми!</a></div> */}
-            <header className="header">
+            <header className={clsx("header", className)}>
                 <div className="container">
                     <div className="row header-row">
                         <div className='header-left'>
@@ -51,7 +52,7 @@ const Header: React.FC = ({ headerLayout }: IProps) => {
                         <div className="header-right">
                             <a className='header-phone' target='_blank' rel="noreferrer" href="https://t.me/marketdbru">
                                 <TelegramIcon color="#fff" />
-                                Telegram
+                                Напишите нам!
                             </a>
                             <a className='btn' href="https://lk.marketdb.ru/">Войти</a>
                         </div>
@@ -82,7 +83,7 @@ const Header: React.FC = ({ headerLayout }: IProps) => {
                         <div className="header-mob-menu-bottom">
                             <a target='_blank' rel="noreferrer" href="https://t.me/marketdbru" className='header-mob-menu-phone'>
                                 <TelegramIcon color="#fff" />
-                                Telegram
+                                Напишите нам!
                             </a>
                             <a target='_blank' rel="noreferrer" href="https://lk.marketdb.ru/" className="btn">Войти</a>
                         </div>

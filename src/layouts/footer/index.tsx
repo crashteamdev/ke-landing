@@ -54,13 +54,13 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                             </a>
                     </div>
                     <div className="footer-bottom-contacts">
-                        <a href="mailto:info-email@marketbd.ru">
+                        <a href="mailto:support@marketdb.ru">
                             <MailIcon color='white' />
-                            info@marketbd.ru
+                            support@marketdb.ru
                         </a>
-                        <a href="tel:8 800 999 99 99">
+                        <a href="tel:+7 937 373 54 69">
                             <PhoneIcon color="white" />
-                            8 800 999 99 99
+                            +7 937 373 54 69
                         </a>
                     </div>
                 </div>
