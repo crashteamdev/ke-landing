@@ -25,7 +25,7 @@ const Header: FC = ({ className }: IProps) => {
                 <div className='top-bar'>
                     <span>«Что продавать на Маркетплейсе? Ищем прибыльные товары через сервис аналитики MarketDB» 17 ноября!</span>
                     <div className='btn-group'>
-                        <a className='btn btn-active' href="https://t.me/+kc_09WBIkYA5ZGIy" rel='noreferrer' target='_blank' onClick={handleClose}>Записаться</a>
+                        <a className='btn btn-active' href="https://t.me/+NtOosCLh5d9jNmVi" rel='noreferrer' target='_blank' onClick={handleClose}>Записаться</a>
                         <div className='btn' onClick={handleClose}>Закрыть</div>
                     </div>
                 </div>
