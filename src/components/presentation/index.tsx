@@ -33,6 +33,24 @@ const data: DataItem[] = [
         desc: "История позиций в категориях, будьте в курсе на какой позиции находилась ваша карточка, что на нее повлияло а так же отслеживайте позиции конкурентов",
         img: "img-3.png"
     },
+    {
+        count: "04",
+        title: "Аналитика магазина",
+        desc: "Множество показатель продаж в магазине конкурента, в том числе отчет в формате Excel. А так же другие магазины продавца",
+        img: "img-4.png"
+    },
+    {
+        count: "05",
+        title: "Аналитика категорий",
+        desc: "Различные показатели для категории, за счет которой можно искать нужную нишу. А так же отчеты в формате Excel.",
+        img: "img-5.png"
+    },
+    {
+        count: "06",
+        title: "Аналитика в каталоге",
+        desc: "Данные о продажах, продавцев прямо в каталоге! Работает на всем сайте.",
+        img: "img-6.png"
+    },
 ]
 
 const PresentationSlider: React.FC = () => {
@@ -55,12 +73,14 @@ const PresentationSlider: React.FC = () => {
                         clickable: true
                     }}
                 >
-                    {data.map(item => (
-                        <SwiperSlide className='presentation-swiper-item'>
+                    {data.map((item, key) => (
+                        <SwiperSlide key={key} className='presentation-swiper-item'>
                             <div className="presentation-swiper-item-content">
                                 <div className="presentation-swiper-item__count">{item.count}</div>
-                                <div className="presentation-swiper-item__title">{item.title}</div>
-                                <div className="presentation-swiper-item__desc">{item.desc}</div>
+                                <div>
+                                    <div className="presentation-swiper-item__title">{item.title}</div>
+                                    <div className="presentation-swiper-item__desc">{item.desc}</div>
+                                </div>
                                 <div className="presentation-swiper-item-arrows">
                                     <div onClick={() => swiperRef.current?.slidePrev()} className="slider-navigation__arrow slider-navigation__arrow-prev">
                                         <ArrowIcon color='#959595' />
