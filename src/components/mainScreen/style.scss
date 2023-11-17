@@ -33,6 +33,9 @@
       max-width: 671px;
       margin-bottom: 40px;
     }
+    @media (max-width: 475px) {
+      max-width: 300px;
+    }
   }
   &-title {
     font-style: normal;
@@ -47,6 +50,10 @@
       font-size: 48px;
       line-height: 120%;
       text-align: center;
+    }
+    @media (max-width: 475px) {
+      font-size: 38px;
+      line-height: normal;
     }
   }
   &-desc {
@@ -64,6 +71,9 @@
       text-align: center;
       max-width: 510px;
     }
+    @media (max-width: 475px) {
+      font-size: 14.5px;
+    }
   }
   &-btn-list {
     display: flex;
@@ -71,7 +81,15 @@
     @media (max-width: 992px) {
       justify-content: center;
     }
+    @media (max-width: 475px) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
     .btn {
+      @media (max-width: 475px) {
+        width: 100%;
+        max-width: 100%;
+      }
       &:first-child {
         margin-right: 5px;
       }

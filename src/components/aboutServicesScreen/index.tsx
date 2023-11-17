@@ -34,7 +34,7 @@ const AboutServicesScreen: React.FC = () => {
                                         </div>
                                         <div className="about-services-item-content">
                                             <div className="about-services-item__title">Проанализировать нишу</div>
-                                            <div className="about-services-item__desc">Изучение ниши перед первой поставкой на маркетплейс.</div>
+                                            <div className="about-services-item__desc">Определиться с товарами, которые будут продаваться</div>
                                         </div>
                                     </div>
                                     <div className="about-services-item">
@@ -114,7 +114,7 @@ const AboutServicesScreen: React.FC = () => {
                                         </div>
                                         <div className="about-services-item-content">
                                             <div className="about-services-item__title">Отчеты по категориям</div>
-                                            <div className="about-services-item__desc">Для более детального изучения ниши - скачивать отчеты по категориям и магазинам.</div>
+                                            <div className="about-services-item__desc">Обойти конкурентов и эффективно управлять бизнесом</div>
                                         </div>
                                     </div>
                                     <div className="about-services-item">
@@ -123,7 +123,7 @@ const AboutServicesScreen: React.FC = () => {
                                         </div>
                                         <div className="about-services-item-content">
                                             <div className="about-services-item__title">Улучшить выдачу товара</div>
-                                            <div className="about-services-item__desc">Отслеживать позицию товара в каждой категории.</div>
+                                            <div className="about-services-item__desc">Принимать взвешенные решения на основе точных данных</div>
                                         </div>
                                     </div>
                                     <div className="about-services-item">
@@ -141,7 +141,7 @@ const AboutServicesScreen: React.FC = () => {
                                         </div>
                                         <div className="about-services-item-content">
                                             <div className="about-services-item__title">Анализ конкурентов</div>
-                                            <div className="about-services-item__desc">Есть цель быть впереди конкурентов.</div>
+                                            <div className="about-services-item__desc">Масштабировать продажи и выйти на новые площадки</div>
                                         </div>
                                     </div>
                                 </>

@@ -33,8 +33,8 @@ const ServicesScreen: React.FC = () => {
     return (
         <div className="services-screen">
             <div className="container">
-                <div className="title">Наши преимущества</div>
-                <div className="desc">Проанализируем каждый товар </div>
+                <div className="title">Почему нам стоит доверять?</div>
+                <div className="desc">Наша команда экспертов использует передовые методы анализа данных для предоставления вам точных и полезных результатов.</div>
                 <div className="services-list">
                     {data.map(item => (
                         <div className="services-item">

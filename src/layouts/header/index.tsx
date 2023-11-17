@@ -16,14 +16,14 @@ const Header: FC = ({ className }: IProps) => {
 
     const handleClose = () => {
         closeTopBar(false);
-        localStorage.setItem('topbar', 'false');
+        localStorage.setItem('topbar1', 'false');
     }
 
     return (
         <>
-            {(localStorage.getItem('topbar') !== 'false' && topBar) &&
+            {(localStorage.getItem('topbar1') !== 'false' && topBar) &&
                 <div className='top-bar'>
-                    <span>«Что продавать на Маркетплейсе? Ищем прибыльные товары через сервис аналитики MarketDB» 17 ноября!</span>
+                    <span>«Что продавать на Маркетплейсе? Ищем прибыльные товары через сервис аналитики MarketDB» сегодня в 18:00!</span>
                     <div className='btn-group'>
                         <a className='btn btn-active' href="https://t.me/+NtOosCLh5d9jNmVi" rel='noreferrer' target='_blank' onClick={handleClose}>Записаться</a>
                         <div className='btn' onClick={handleClose}>Закрыть</div>

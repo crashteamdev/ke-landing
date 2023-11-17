@@ -12,13 +12,13 @@ const DeveloperScreen: React.FC = () => {
                             <div className="title">Услуги по разработке ПО</div>
                             <div className="desc">Очень длинный текст про услуги по разработке ПО, который очень сильно должен зацепить пользователя</div>
                             <div className="developer-contacts">
-                                <a href="mailto:info-email@marketbd.ru">
+                                <a href="mailto:support@marketdb.ru">
                                     <MailIcon color="#3C7BEB" />
-                                    info-email@marketbd.ru
+                                    support@marketdb.ru
                                 </a>
-                                <a href="tel:8 800 999 99 99">
+                                <a href="tel:+7 937 373 54 69">
                                     <PhoneIcon color="#3C7BEB" />
-                                    8 800 999 99 99
+                                    +7 937 373 54 69
                                 </a>
                             </div>
                         </div>
