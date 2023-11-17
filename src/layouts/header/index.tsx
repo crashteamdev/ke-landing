@@ -21,7 +21,7 @@ const Header: FC = ({ className }: IProps) => {
 
     return (
         <>
-            {(localStorage.getItem('topbar1') !== 'false' && topBar) &&
+            {/* {(localStorage.getItem('topbar1') !== 'false' && topBar) &&
                 <div className='top-bar'>
                     <span>«Что продавать на Маркетплейсе? Ищем прибыльные товары через сервис аналитики MarketDB» сегодня в 18:00!</span>
                     <div className='btn-group'>
@@ -29,7 +29,7 @@ const Header: FC = ({ className }: IProps) => {
                         <div className='btn' onClick={handleClose}>Закрыть</div>
                     </div>
                 </div>
-            }
+            } */}
             <header className={clsx("header", className)}>
                 <div className="container">
                     <div className="row header-row">
