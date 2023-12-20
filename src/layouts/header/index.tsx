@@ -69,7 +69,7 @@ const Header: FC = ({ className }: IProps) => {
                                 <TelegramIcon color="#fff" />
                                 Напишите нам!
                             </a>
-                            <a className='btn' href="https://lk.marketdb.ru/">Войти</a>
+                            <a className='btn' href="https://space.marketdb.pro/">Войти</a>
                         </div>
                         <div className="header-burger" onClick={() => setBurger(true)}>
                             <span></span>
@@ -100,7 +100,7 @@ const Header: FC = ({ className }: IProps) => {
                                 <TelegramIcon color="#fff" />
                                 Напишите нам!
                             </a>
-                            <a target='_blank' rel="noreferrer" href="https://lk.marketdb.ru/" className="btn">Войти</a>
+                            <a target='_blank' rel="noreferrer" href="https://space.marketdb.pro/" className="btn">Войти</a>
                         </div>
                     </div>
                 }
