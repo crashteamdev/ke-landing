@@ -21,8 +21,8 @@ const SEO: FC<IProps> = ({ title, titleTemplate, description }) => {
 
 SEO.defaultProps = {
     title: "MarketDB",
-    titleTemplate: "Аналитика маркетплейса KazanExpress",
-    description: "Аналитика маркетплейса KazanExpress",
+    titleTemplate: "Аналитика маркетплейса KazanExpress / Магнит Маркет",
+    description: "Аналитика маркетплейса KazanExpress / Магнит Маркет",
 };
 
 export default SEO;

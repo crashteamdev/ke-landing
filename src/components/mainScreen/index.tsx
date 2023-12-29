@@ -7,8 +7,8 @@ const MainScreen: React.FC = () => {
             <div className="container">
                 <div className="row main-screen-row">
                     <div>
-                        <div className="main-screen-title">Аналитика KazanExpress</div>
-                        <div className="main-screen-desc">Сервис аналитики KazanExpress на основе браузерного расширения для Chrome, Opera, Mozilla и Яндекс браузер.</div>
+                        <div className="main-screen-title">Аналитика KazanExpress / Магнит Маркет</div>
+                        <div className="main-screen-desc">Сервис аналитики KazanExpress / Магнит Маркет на основе браузерного расширения для Chrome, Opera, Mozilla и Яндекс браузер.</div>
                         <div className="main-screen-btn-list">
                             <a href="https://space.marketdb.pro/" className='btn btn--orange'>Попробовать бесплатно</a>
                             <Link
