@@ -22,8 +22,8 @@ const HomePage = () => {
             <FeaturesScreen />
 
             <SubsScreen />
-            {/* <Posts />
-            <DeveloperScreen /> */}
+            <Posts />
+            {/* <DeveloperScreen /> */}
         </Layout>
     )
 }

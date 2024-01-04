@@ -12,7 +12,7 @@ const Layout = ({
     className
 }: IProps) => {
     return (
-        <div className={clsx("", className)}>
+        <div style={{"overflowX": "hidden"}} className={clsx("", className)}>
             <Header />
                 {children}
             <Footer />
