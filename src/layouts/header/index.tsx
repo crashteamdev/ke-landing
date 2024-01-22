@@ -21,15 +21,15 @@ const Header: FC = ({ className }: IProps) => {
 
     return (
         <>
-            {/* {(localStorage.getItem('topbar1') !== 'false' && topBar) &&
+            {(localStorage.getItem('topbar1') !== 'false' && topBar) &&
                 <div className='top-bar'>
-                    <span>«Что продавать на Маркетплейсе? Ищем прибыльные товары через сервис аналитики MarketDB» сегодня в 18:00!</span>
+                    <span>Впервые у нас? Запроси доступ к демо-тарифу на 5 дней!</span>
                     <div className='btn-group'>
-                        <a className='btn btn-active' href="https://t.me/+NtOosCLh5d9jNmVi" rel='noreferrer' target='_blank' onClick={handleClose}>Записаться</a>
+                        <a className='btn btn-active' href="https://t.me/marketdbchat" rel='noreferrer' target='_blank' onClick={handleClose}>Написать</a>
                         <div className='btn' onClick={handleClose}>Закрыть</div>
                     </div>
                 </div>
-            } */}
+            }
             <header className={clsx("header", className)}>
                 <div className="container">
                     <div className="row header-row">
@@ -65,7 +65,7 @@ const Header: FC = ({ className }: IProps) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            <a className='header-phone' target='_blank' rel="noreferrer" href="https://t.me/marketdbru">
+                            <a className='header-phone' target='_blank' rel="noreferrer" href="https://t.me/marketdbchat">
                                 <TelegramIcon color="#fff" />
                                 Напишите нам!
                             </a>
