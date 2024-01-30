@@ -1,5 +1,5 @@
 {
-  "name": "ke-landing",
+  "name": "marketdb.pro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-input/mask": "^1.0.20",
     "@types/react-helmet": "^6.1.11",
     "@types/react-scroll": "^1.8.10",
     "@uidotdev/usehooks": "^2.4.1",
     "clsx": "^2.1.0",
+    "formik": "^2.4.5",
     "next": "14.0.4",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^9.3.0",

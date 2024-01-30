@@ -139,20 +139,27 @@ const SubsScreen: React.FC = () => {
                     {data.map((item, key) => (
                         <SwiperSlide key={key} className="subs-item">
                             <div>
-                                <div className="subs-item__title">{item.title}</div>
+                                <div className="subs-item__title">
+                                    {item.title}
+                                </div>
+                                {threeMonth && !item.free && <div className='subs-item__discount'>{item.discount}% cкидка</div>}
                                 <div className="subs-item__desc">{item.desc}</div>
-                                <div className="subs-item__name">
 
-                                    {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>Бесплатно</span>}
-                                    
-                                    {!item.free && (
-                                        !threeMonth ?
-                                            (<div className="subs-item__name--date"> / месяц</div>)
-                                            :
-                                            (<div className="subs-item__name--date"> / 3 месяца</div>)
-                                        )
-                                    }
+                                <div className='subs-item-row border-b border-grayModern-400'>
+                                    <div className="subs-item__name">
 
+                                        {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>Бесплатно</span>}
+                                        
+                                        {!item.free && (
+                                            !threeMonth ?
+                                                (<div className="subs-item__name--date"> / месяц</div>)
+                                                :
+                                                (<div className="subs-item__name--date"> / 3 месяца</div>)
+                                            )
+                                        }
+
+                                    </div>
+                                    {threeMonth && !item.free && <div className='text-[12px] text-grayModern-400 font-medium border-t border-grayModern-400 pt-[10px]'>Месяц за {Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) / 3)}<span> ₽</span></div>}
                                 </div>
                                 <div className="subs-advantages">
                                     {item.list.map((itemSubs, key) => (

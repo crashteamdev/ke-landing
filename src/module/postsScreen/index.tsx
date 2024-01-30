@@ -16,7 +16,7 @@ const Posts: React.FC = () => {
         return text.length > 100 ? text.slice(0, 100) + "..." : text;
     }
     return (
-        <div className="posts-screen">
+        <div className="posts-screen overflow-hidden">
             <div className="container">
                 <div className="row-post">
                     <div className="title">Наши статьи</div>

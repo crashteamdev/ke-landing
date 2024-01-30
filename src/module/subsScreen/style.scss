@@ -53,6 +53,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      &-row {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
       &-popular.btn.btn--orange {
         position: absolute;
         padding: 0;
@@ -69,7 +73,7 @@
       &__title {
         font-style: normal;
         font-weight: 600;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 120%;
         color: #1a1a1a;
         margin-bottom: 10px;
@@ -85,10 +89,8 @@
         color: #959595;
       }
       &__name {
-        margin-bottom: 20px;
         display: flex;
         align-items: baseline;
-        border-bottom: 1px solid rgba(26, 26, 26, 0.1);
         span {
           font-style: normal;
           font-weight: 400;
@@ -103,6 +105,16 @@
           font-size: 16px;
           line-height: 24px;
         }
+      }
+      &__discount {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 50px;
+        position: absolute;
+        right: 15px;
+        top: -15px;
       }
       .subs-advantages {
         margin-bottom: 30px;

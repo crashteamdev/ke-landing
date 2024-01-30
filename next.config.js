@@ -26,6 +26,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'www.shoppingcentreawards.com',
+                port: '',
+                pathname: '/**',
+            },
         ],
     }
 }
