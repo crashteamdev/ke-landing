@@ -2,6 +2,7 @@ import { CallToAction } from '@/module/CallToAction'
 import { Faq } from '@/module/Faq'
 import { RepricerAbout } from '@/module/RepricerAbout'
 import { Reviews } from '@/module/Reviews'
+import { SellServices } from '@/module/SellServices'
 import AboutScreen from '@/module/about'
 import AboutServicesScreen from '@/module/aboutServicesScreen'
 import CompanySlider from '@/module/company'
@@ -22,7 +23,7 @@ export default function Home() {
       <ServicesScreen />
       <AboutServicesScreen />
       <AboutScreen />
-
+      <SellServices />
       <FeaturesScreen />
       <RepricerAbout />
       <SubsScreen />

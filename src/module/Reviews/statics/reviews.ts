@@ -1,32 +1,23 @@
 export const reviews = [
     {
-        sellerName: "Артем Григорьев",
-        sellerPhoto: "https://www.shoppingcentreawards.com/wp-content/uploads/2015/06/people-img7.jpg",
-        sellerShop: "Uzum",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta ab quae nostrum dolore, numquam esse. Iusto quos unde maiores eaque laboriosam voluptatibus laudantium provident natus sit. Fugiat, quos dolore!"
-    },
-    {
-        sellerName: "Рамиль Григорьев",
-        sellerPhoto: "https://www.shoppingcentreawards.com/wp-content/uploads/2015/06/people-img7.jpg",
-        sellerShop: "KazanExpress",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta ab quae nostrum dolore, numquam esse. Iusto quos unde maiores eaque laboriosam voluptatibus laudantium provident natus sit. Fugiat, quos dolore!"
-    },
-    {
-        sellerName: "Миша Васильев",
-        sellerPhoto: "https://www.shoppingcentreawards.com/wp-content/uploads/2015/06/people-img7.jpg",
-        sellerShop: "KazanExpress",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta ab quae nostrum dolore, numquam esse. Iusto quos unde maiores eaque laboriosam voluptatibus laudantium provident natus sit. Fugiat, quos dolore!"
-    },
-    {
-        sellerName: "Игорь Банин",
-        sellerPhoto: "https://www.shoppingcentreawards.com/wp-content/uploads/2015/06/people-img7.jpg",
-        sellerShop: "Uzum",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta ab quae nostrum dolore, numquam esse. Iusto quos unde maiores eaque laboriosam voluptatibus laudantium provident natus sit. Fugiat, quos dolore!"
+        sellerName: "Ильмир Хасанши",
+        sellerPhoto: "/images/reviews/reviews-1.jpg",
+        sellerShop: "KazanExpress/Uzum",
+        text: "MarketDb удобен в использовании. С помощью него мне удалось найти больше количество нового товара для продажи на маркетплейсах. Сервис аналитики подробно показывает продажи и спрос на товар, тем самым можно найти даже востребованный ску товара и избежать риски по их продаже дабы не уйти в минус.",
+        tg: "https://t.me/ikhasanshin",
     },
     {
         sellerName: "Артем Григорьев",
-        sellerPhoto: "https://www.shoppingcentreawards.com/wp-content/uploads/2015/06/people-img7.jpg",
-        sellerShop: "KazanExpress",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta ab quae nostrum dolore, numquam esse. Iusto quos unde maiores eaque laboriosam voluptatibus laudantium provident natus sit. Fugiat, quos dolore!"
+        sellerPhoto: "/images/reviews/reviews-2.jpg",
+        sellerShop: "KazanExpress/WB",
+        text: "Уже более 3 лет используем для  аналитики КазаньЭкспресс MarketDB. Удобно видеть, продажи по карточкам в поиске по аналогии с сервисами аналитики WB. Ипользуем историю продаж, цен, остатков карточке товара. Скачиваем продажи магазинов конкурентов , видим , какие товары приносят больше всего продаж.",
+        tg: "https://t.me/artem_grigoryev",
     },
+    {
+        sellerName: "Константин Киммериец",
+        sellerPhoto: "/images/reviews/reviews-3.jpg",
+        sellerShop: "KazanExpress/Uzum",
+        text: "Я даже и не представляю, как можно вообще что-либо продавать на маркетплейсе без МаркетДБ. С первого дня пользуюсь этим плагином. Будь возможность проплатить сразу на год, я бы это сделал. Без этой аналитики ты как слепой котёнок, который вообще не понимает какие товары пользуются спросом и что точно не стоит завозить.",
+        tg: "https://t.me/kostolaz_live",
+    }
 ];

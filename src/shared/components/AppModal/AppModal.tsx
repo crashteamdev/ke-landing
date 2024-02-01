@@ -51,16 +51,15 @@ export const ModalContent: React.FC<PropsWithChildren<PropsModal>> = ({
     <div
       className={clsx(
         "relative flex flex-col",
-        "lg:min-h-[220px] lg:max-h-[600px] lg:w-[800px] min-h-full w-full",
-        "gap-6 p-6",
-        "lg:rounded-3 bg-white text-black",
+        "lg:min-h-[220px] lg:max-h-[600px] lg:w-[600px] min-h-full w-full",
+        "rounded-[18px] bg-white text-black",
         className
       )}
     >
       {closeHandler && (
         <button
           type='button'
-          className='absolute right-[20px] lg:right-0 top-[-48px] h-9 w-9 lg:bg-white rounded-2'
+          className='absolute right-1 top-1 h-9 w-9 rounded-2 flex items-center justify-center'
           onClick={closeHandler}
         >
           <CloseIcon color="black" />
@@ -87,6 +86,7 @@ export const AppModal: React.FC<PropsWithChildren<Props>> = ({
       className={clsx(
         "fixed z-50 inset-x-0 inset-y-0 w-full lg:p-4 lg:pt-0 pt-[124px] overflow-y-auto no-scrollbar",
         "flex flex-col items-center justify-center",
+        "bg-blueGray-900/60",
         className
       )}
     >
