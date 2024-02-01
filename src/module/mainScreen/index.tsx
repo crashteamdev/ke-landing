@@ -6,12 +6,13 @@ import Link from 'next/link';
 import { AppModal } from '@/shared/components/AppModal';
 import { useModal } from '@/shared/hooks/useModal';
 
-import MailIcon from '@/shared/components/icons/mailIcon';
 import './style.scss';
-import PhoneIcon from '@/shared/components/icons/phoneIcon';
 import { useFormik, FormikErrors, FormikValues } from 'formik';
 import clsx from 'clsx';
 import { useMask } from '@react-input/mask';
+import { APISRMLEAD } from '@/shared/config';
+
+import { v4 as uuidv4 } from 'uuid';
 
 interface Values {
     name: string;
@@ -53,11 +54,24 @@ const MainScreen: React.FC = () => {
         },
         validate,
         onSubmit: async (values) => {
-            alert(JSON.stringify(values, null, 2));
-            await fetch("", {
-
+            // alert(JSON.stringify(values, null, 2));
+            await fetch(APISRMLEAD, {
+                method: "POST",
+                headers: {
+                    "X-Request-ID": uuidv4(),
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    "leadType": "demo",
+                    "userIdentity": {
+                        "firstname": values.name
+                    },
+                    "userPhoneNumber": values.phone,
+                    "userEmail": values.email
+                })
             }).then((data) => {
-                
+                console.log(data);
             });
         },
     });
