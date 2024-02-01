@@ -58,8 +58,8 @@ const DeveloperScreen: React.FC = () => {
                 <div className="row developer-row">
                     <div className='developer-info'>
                         <div className='developer-info-content'>
-                            <div className="title">Услуги по разработке ПО</div>
-                            <div className="desc">Очень длинный текст про услуги по разработке ПО, который очень сильно должен зацепить пользователя</div>
+                            <div className="title">Обратная связь</div>
+                            <div className="desc">С нами можно связаться через почту <a className='underline' href="mailto:support@marketdb.ru">support@marketdb.ru</a> или через <a className='underline' href="https://t.me/marketdbchat">Телеграм чат</a></div>
                             <div className="developer-contacts">
                                 <a href="mailto:support@marketdb.ru">
                                     <MailIcon color="#3C7BEB" />
@@ -74,8 +74,8 @@ const DeveloperScreen: React.FC = () => {
                         <Image width={300} height={300} src="/images/developer.png" alt="" />
                     </div>
                     <div className='form'>
-                        <div className="form-title">Нужен отдельный функционал?</div>
-                        <div className="form-desc">Оставьте заявку и мы скоро с вами свяжемся</div>
+                        <div className="form-title">Остались вопросы?</div>
+                        <div className="form-desc">Оставь свой вопрос в форме и мы свяжемся с тобой!</div>
                         <form onSubmit={formik.handleSubmit}>
                             <label htmlFor="">
                                 <div>

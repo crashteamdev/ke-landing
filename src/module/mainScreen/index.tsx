@@ -17,7 +17,6 @@ interface Values {
     name: string;
     email: string;
     phone: string;
-    comment: string;
 }
 
 const validate = (values: Values): FormikErrors<Values> => {
@@ -51,11 +50,15 @@ const MainScreen: React.FC = () => {
             name: "",
             email: "",
             phone: "",
-            comment: ""
         },
         validate,
-        onSubmit: values => {
+        onSubmit: async (values) => {
             alert(JSON.stringify(values, null, 2));
+            await fetch("", {
+
+            }).then((data) => {
+                
+            });
         },
     });
     return (
