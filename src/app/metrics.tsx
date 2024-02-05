@@ -78,6 +78,7 @@ const Metrics = () => {
 
           gtag("config", "G-LMLC2GYSL1");`}
         </Script>
+        <Script id="okocrm-chat" src="https://chat.okocrm.com/widget/js/1dd25179-12a9-4ec0-bf46-c7800badc515" async></Script>
         </>
     );
 };
