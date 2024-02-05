@@ -13,6 +13,7 @@ import { useMask } from '@react-input/mask';
 import { APISRMLEAD } from '@/shared/config';
 
 import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
 
 interface Values {
     name: string;
@@ -41,9 +42,13 @@ const validate = (values: Values): FormikErrors<Values> => {
     }
   
     return errors;
-  };
+};
 
 const MainScreen: React.FC = () => {
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
+    const [timeout, setTimeout] = useState(false);
+
     const { open, handleToggle, handleClose } = useModal();
     const inputRef = useMask({ mask: '+7 (___) ___-__-__', replacement: { _: /\d/ } });
     const formik = useFormik({
@@ -54,7 +59,7 @@ const MainScreen: React.FC = () => {
         },
         validate,
         onSubmit: async (values) => {
-            // alert(JSON.stringify(values, null, 2));
+            setTimeout(true);
             await fetch(APISRMLEAD, {
                 method: "POST",
                 headers: {
@@ -71,7 +76,13 @@ const MainScreen: React.FC = () => {
                     "userEmail": values.email
                 })
             }).then((data) => {
-                console.log(data);
+                if(data.status === 200) {
+                    setSuccess(true);
+                    setTimeout(false);
+                } else {
+                    setError(true);
+                    setTimeout(false);
+                }
             });
         },
     });
@@ -109,49 +120,68 @@ const MainScreen: React.FC = () => {
                 closeHandler={handleClose}
             >
                 <div className='form w-full !max-w-full !h-full'>
-                    <div className="form-title">Протестируй бесплатно</div>
-                    <div className="form-desc w-full max-w-[400px]">Оставь заявку, и мы откроем бесплатный доступ к сервису на 5 дней.</div>
-                    <form onSubmit={formik.handleSubmit}>
-                        <label htmlFor="" className='w-full'>
-                            <input
-                                id="name"
-                                type="text" 
-                                placeholder='Имя' 
-                                onChange={formik.handleChange}
-                                value={formik.values.name}
-                                className={clsx("", {
-                                    "!border !border-[red]": formik.errors.name
-                                })}
-                            />
-                            <input 
-                                id="phone"
-                                type="text" 
-                                placeholder='+7 (_ _ _) _ _ _   _ _  _ _' 
-                                onChange={formik.handleChange}
-                                value={formik.values.phone}
-                                className={clsx("", {
-                                    "!border !border-[red]": formik.errors.phone
-                                })}
-                                ref={inputRef}
-                            />
-                        </label>
-                        <label htmlFor="email">
-                            <input 
-                                id="email"
-                                type="email" 
-                                placeholder='E-mail' 
-                                onChange={formik.handleChange}
-                                value={formik.values.email}
-                                className={clsx("", {
-                                    "!border !border-[red]": formik.errors.email
-                                })}
-                            />
-                        </label>
-                        <div className='form-send'>
-                            <button type="submit" className="btn btn--orange">Отправить заявку</button>
-                            <span>Нажимая на кнопку, вы даете <a href="/privacy">согласие на обработку своих персональных данных</a></span>
+                    {!success ?
+                        <>
+                            <div className="form-title">Протестируй бесплатно</div>
+                            <div className="form-desc w-full max-w-[400px]">Оставь заявку, и мы откроем бесплатный доступ к сервису на 5 дней.</div>
+                            <form onSubmit={formik.handleSubmit}>
+                                <label htmlFor="" className='w-full'>
+                                    <input
+                                        id="name"
+                                        type="text" 
+                                        placeholder='Имя' 
+                                        onChange={formik.handleChange}
+                                        value={formik.values.name}
+                                        className={clsx("", {
+                                            "!border !border-[red]": formik.errors.name
+                                        })}
+                                    />
+                                    <input 
+                                        id="phone"
+                                        type="text" 
+                                        placeholder='+7 (_ _ _) _ _ _   _ _  _ _' 
+                                        onChange={formik.handleChange}
+                                        value={formik.values.phone}
+                                        className={clsx("", {
+                                            "!border !border-[red]": formik.errors.phone
+                                        })}
+                                        ref={inputRef}
+                                    />
+                                </label>
+                                <label htmlFor="email">
+                                    <input 
+                                        id="email"
+                                        type="email" 
+                                        placeholder='E-mail' 
+                                        onChange={formik.handleChange}
+                                        value={formik.values.email}
+                                        className={clsx("", {
+                                            "!border !border-[red]": formik.errors.email
+                                        })}
+                                    />
+                                </label>
+                                <div className='form-send'>
+                                    <button type="submit" className="btn btn--orange">Отправить заявку</button>
+                                    <span>Нажимая на кнопку, вы даете <a href="/privacy">согласие на обработку своих персональных данных</a></span>
+                                </div>
+                            </form>
+                            {error && <div className='mt-4 text-[red]'>Неизвестная ошибка! Обратитесь в тех.поддержку.</div>}
+                        </>
+                    :
+                        <div className='flex flex-col justify-center items-center'>
+                            <div className='mb-[30px]'>
+                                <Image src="/images/icon/success.png" width={68} height={68} alt="Успешно" />
+                            </div>
+                            <div className="form-title">Спасибо за заявку!</div>
+                            <div className="form-desc">Мы свяжемся с вами в ближайшее время.</div>
                         </div>
-                    </form>
+                    }
+
+                    {timeout &&
+                        <div className='absolute w-full h-full bg-blueGray-100/60 right-0 top-0 flex items-center justify-center'>
+                            <span className="loader"></span>
+                        </div>
+                    }
                 </div>
             </AppModal>
         </>
