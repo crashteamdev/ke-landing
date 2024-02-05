@@ -171,8 +171,8 @@ export const SellServices = () => {
                 <div className='form w-full !max-w-full !h-full'>
                     {!success ?
                         <>
-                            <div className="form-title">Протестируй бесплатно</div>
-                            <div className="form-desc w-full max-w-[400px]">Оставь заявку, и мы откроем бесплатный доступ к сервису на 5 дней.</div>
+                            <div className="form-title">Делегируйте задачи профессионалам</div>
+                            <div className="form-desc w-full max-w-[400px]">Оставь заявку и мы свяжемся с тобой для обсуждения деталей.</div>
                             <form onSubmit={formik.handleSubmit}>
                                 <label htmlFor="" className='w-full'>
                                     <input
