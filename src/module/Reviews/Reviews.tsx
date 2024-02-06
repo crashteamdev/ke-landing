@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { reviews } from "./statics/reviews";
 
-import ArrowIcon from '@/shared/components/icons/arrowIcon';
 import { Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import { type Swiper as SwiperTypes } from "swiper";
@@ -33,7 +32,7 @@ export const Reviews = () => {
                     pagination={{
                         clickable: true
                     }}
-                    className="post-swiper"
+                    className="post-swiper reviews"
                     breakpoints={{
                         768: {
                             slidesPerGroup: 2,

@@ -109,12 +109,12 @@ const DeveloperScreen: React.FC = () => {
                             </div>
                             <Image width={300} height={300} src="/images/developer.png" alt="" />
                         </div>
-                        <div className='form'>
+                        <div className='form max-md:my-[30px]'>
                             <div className="form-title">Остались вопросы?</div>
                             <div className="form-desc">Оставь свой вопрос в форме и мы свяжемся с тобой!</div>
                             <form onSubmit={formik.handleSubmit}>
                                 <label htmlFor="">
-                                    <div>
+                                    <div className='w-full'>
                                         <input
                                             id="name"
                                             type="text" 

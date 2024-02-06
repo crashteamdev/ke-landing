@@ -33,7 +33,7 @@ const Header: FC = ({ className }: IProps) => {
                     </div>
                 </div>
             } */}
-            <header className={clsx("header relative z-10", className)}>
+            <header className={clsx("header z-10", className)}>
                 <div className="container">
                     <div className="row header-row">
                         <div className='header-left'>
