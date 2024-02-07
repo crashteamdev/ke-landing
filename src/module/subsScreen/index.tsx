@@ -295,7 +295,7 @@ const SubsScreen: React.FC = () => {
                             <div className="form-title">Протестируй бесплатно</div>
                             <div className="form-desc w-full max-w-[400px]">Оставь заявку, и мы откроем бесплатный доступ к сервису на 5 дней.</div>
                             <form onSubmit={formik.handleSubmit}>
-                                <label htmlFor="" className='w-full'>
+                                <label htmlFor="name" className='w-full'>
                                     <input
                                         id="name"
                                         type="text" 

@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <head>
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:url" content="https://marketdb.ru/" />

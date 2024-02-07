@@ -40,7 +40,7 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                             <MailIcon color='white' />
                             support@marketdb.ru
                         </a>
-                        <a href="tel:+7 937 373 54 69">
+                        <a href="tel:+79373735469">
                             <PhoneIcon color="white" />
                             +7 937 373 54 69
                         </a>

@@ -101,7 +101,7 @@ const DeveloperScreen: React.FC = () => {
                                         <MailIcon color="#3C7BEB" />
                                         support@marketdb.ru
                                     </a>
-                                    <a href="tel:+7 937 373 54 69">
+                                    <a href="tel:+79373735469">
                                         <PhoneIcon color="#3C7BEB" />
                                         +7 937 373 54 69
                                     </a>
@@ -113,7 +113,7 @@ const DeveloperScreen: React.FC = () => {
                             <div className="form-title">Остались вопросы?</div>
                             <div className="form-desc">Оставь свой вопрос в форме и мы свяжемся с тобой!</div>
                             <form onSubmit={formik.handleSubmit}>
-                                <label htmlFor="">
+                                <label htmlFor="name">
                                     <div className='w-full'>
                                         <input
                                             id="name"
@@ -150,7 +150,7 @@ const DeveloperScreen: React.FC = () => {
                                         })}
                                     />
                                 </label>
-                                <label htmlFor="">
+                                <label htmlFor="comment">
                                     <textarea 
                                         id="comment"
                                         placeholder='Комментарий' 
