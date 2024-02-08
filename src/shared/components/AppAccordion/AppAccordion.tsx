@@ -77,18 +77,18 @@ export const AppAccordion: React.FC<Props> = ({
         {...(open ? { "aria-controls": controlId } : {})}
         onClick={() => setOpen(!open)}
       >
-        <div>
-          <div
+        <span>
+          <span
             className={clsx({
               "text-[20px] font-semibold leading-[28px] tracking-[-0.24px] max-md:text-[16px] max-md:leading-[24px]": titleSize === "default"
             })}
           >
             {title}
-          </div>
+          </span>
           {description !== "" && (
             <div className={clsx("mt-4", { hidden: !open })}>{description}</div>
           )}
-        </div>
+        </span>
         {!open ? <PlusIcon /> : <MinusIcon /> }
         {/* <div className={clsx("rotate-[90deg]", { "rotate-[270deg]": open })}>
           <ArrowIcon color="black"/>

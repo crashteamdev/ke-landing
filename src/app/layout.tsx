@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:url" content="https://marketdb.ru/" />
         <meta property="og:site_name" content="Marketdb" />

@@ -110,7 +110,8 @@ const MainScreen: React.FC = () => {
                 </div>
                 <div className='absolute right-0 w-full h-full flex justify-end items-center max-[992px]:hidden'>
                     <div className='w-full max-w-[880px] h-[668px] relative max-[1400px]:max-w-[600px] max-[1400px]:h-[500px]'>
-                        <Image fill className='' src="/images/inform.png" alt="Аналитика KazanEpxress / Магнит Маркет" />
+                        <Image blurDataURL="URL"
+        placeholder="blur" fill className='' src="/images/inform.png" alt="Аналитика KazanEpxress / Магнит Маркет" />
                     </div>
                 </div>
             </div>
