@@ -13,41 +13,12 @@ import { AppModal } from '@/shared/components/AppModal';
 import { useModal } from '@/shared/hooks/useModal';
 import { useFormik, FormikErrors, FormikValues } from 'formik';
 import clsx from 'clsx';
-import { useMask } from '@react-input/mask';
 import { APISRMLEAD } from '@/shared/config';
 
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
-
-interface Values {
-    name: string;
-    email: string;
-    phone: string;
-    nameServices: string;
-}
-
-const validate = (values: Values): FormikErrors<Values> => {
-    const errors: FormikErrors<Values> = {};
-    if (!values.name) {
-      errors.name = 'Required';
-    } else if (values.name.length > 15) {
-      errors.name = 'Must be 15 characters or less';
-    }
-  
-    if (!values.phone) {
-      errors.phone = 'Required';
-    } else if (values.phone.length > 20) {
-      errors.phone = 'Must be 20 characters or less';
-    }
-  
-    if (!values.email) {
-      errors.email = 'Required';
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-      errors.email = 'Invalid email address';
-    }
-  
-    return errors;
-};
+import { validate } from '@/shared/hooks/useValidate';
+import PhoneInput from 'react-phone-number-input/input';
 
 const SellServices = () => {
     const [success, setSuccess] = useState(false);
@@ -61,7 +32,6 @@ const SellServices = () => {
         setNameServices(nameServices);
         handleToggle();
     }
-    const inputRef = useMask({ mask: '+7 (___) ___-__-__', replacement: { _: /\d/ } });
     const formik = useFormik({
         initialValues: {
             name: "",
@@ -185,16 +155,15 @@ const SellServices = () => {
                                             "!border !border-[red]": formik.errors.name
                                         })}
                                     />
-                                    <input 
+                                    <PhoneInput
                                         id="phone"
                                         type="text" 
-                                        placeholder='+7 (_ _ _) _ _ _   _ _  _ _' 
-                                        onChange={formik.handleChange}
+                                        placeholder='Номер телефона*'
                                         value={formik.values.phone}
+                                        onChange={(e) => formik.setFieldValue("phone", e)}
                                         className={clsx("", {
                                             "!border !border-[red]": formik.errors.phone
                                         })}
-                                        ref={inputRef}
                                     />
                                 </label>
                                 <label htmlFor="email">
