@@ -9,7 +9,6 @@ import CloseIcon from '../icons/close';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 import { menuItem } from './statics';
-import { useFeatureFlagVariantKey } from 'posthog-js/react';
 
 interface IProps {
     className?: string;
@@ -19,9 +18,6 @@ const Header: FC = ({ className }: IProps) => {
     const [btnLkSite, setBtnLkSite] = useState("Анализировать!");
     const [burger, setBurger] = useState(false);
     const [topBar, closeTopBar] = useState(true);
-    const variant = useFeatureFlagVariantKey('btn-login-lk');
-
-    console.log(variant);
 
     const handleClose = () => {
         closeTopBar(false);
@@ -74,7 +70,7 @@ const Header: FC = ({ className }: IProps) => {
                                 <TelegramIcon color="#fff" />
                                 Напишите нам!
                             </Link>
-                            <Link className='btn' href="https://space.marketdb.pro/">{btnLkSite}</Link>
+                            <Link className='btn' href="https://space.marketdb.pro/?utm_source=mm&utm_medium=organic&utm_content=btn_singin">{btnLkSite}</Link>
                         </div>
                         <div className="header-burger" onClick={() => setBurger(true)}>
                             <span></span>
@@ -115,7 +111,7 @@ const Header: FC = ({ className }: IProps) => {
                                 <TelegramIcon color="black" />
                                 Напишите нам!
                             </Link>
-                            <Link target='_blank' rel="noreferrer" href="https://space.marketdb.pro/" className="btn">{btnLkSite}</Link>
+                            <Link target='_blank' rel="noreferrer" href="https://space.marketdb.pro/?utm_source=mm&utm_medium=organic&utm_content=btn_singin" className="btn">{btnLkSite}</Link>
                         </div>
                     </div>
                 }

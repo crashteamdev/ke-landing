@@ -8,13 +8,10 @@ import { v4 as uuidv4 } from 'uuid';
 import PhoneInput from 'react-phone-number-input/input';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IPropsAppModalDemo } from "./types";
 
-type IPropsAppModalDemo = {
-    open: boolean;
-    handleClose: () => void;
-}
-
-export const AppModalDemo = ({open, handleClose} :IPropsAppModalDemo) => {
+export const AppModalDemo = ({open, handleClose, utmTags} :IPropsAppModalDemo) => {
+    
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
     const [timeout, setTimeout] = useState(false);
@@ -41,7 +38,8 @@ export const AppModalDemo = ({open, handleClose} :IPropsAppModalDemo) => {
                         "firstname": values.name
                     },
                     "userPhoneNumber": values.phone,
-                    "userEmail": values.email
+                    "userEmail": values.email,
+                    ...((utmTags?.source || utmTags?.medium || utmTags?.campaign || utmTags?.content || utmTags?.term) && { utmTags })
                 })
             }).then((data) => {
                 if(data.status === 200) {

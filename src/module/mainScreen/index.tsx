@@ -7,6 +7,7 @@ import { useModal } from '@/shared/hooks/useModal';
 
 import './style.scss';
 import { AppModalDemo } from '@/components/AppModalDemo';
+import { Link as ScrollLink } from 'react-scroll';
 
 const MainScreen: React.FC = () => {
 
@@ -19,24 +20,32 @@ const MainScreen: React.FC = () => {
                         <div>
                             <div className="main-screen-title">Аналитика Магнит Маркет</div>
                             <div className="main-screen-desc">
-                                Комплекс сервисов для аналитики Магнит Маркет, а так же сервис для автоматического изменения цен.
+                                Самая большая и точная аналитика для Магнит Маркет. А так же сервис для работы с ценами на товары - автоизменение цен.
                             </div>
                             <div className="main-screen-btn-list">
                                 <Link href={""} onClick={() => handleToggle()} className='btn btn--orange'>Попробовать бесплатно</Link>
-                                <Link
-                                    href="/"
+                                <ScrollLink 
+                                    to={"tariff"} 
+                                    spy={true} 
+                                    smooth={true} 
+                                    duration={500}
                                     className='btn'
                                 >
-                                    Узнать тарифы
-                                </Link>
+                                    Наши тарифы
+                                </ScrollLink>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='absolute right-0 w-full h-full flex justify-end items-center max-[992px]:hidden'>
                     <div className='w-full max-w-[880px] h-[668px] relative max-[1400px]:max-w-[600px] max-[1400px]:h-[500px]'>
-                        <Image blurDataURL="URL"
-        placeholder="blur" fill className='' src="/images/inform.png" alt="Аналитика KazanEpxress / Магнит Маркет" />
+                        <Image 
+                            blurDataURL="URL" 
+                            placeholder="blur" 
+                            fill className='' 
+                            src="/images/inform.png" 
+                            alt="Аналитика Магнит Маркет" 
+                        />
                     </div>
                 </div>
             </div>

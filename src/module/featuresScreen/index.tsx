@@ -5,8 +5,16 @@ import './style.scss';
 import { useWindowSize } from "@uidotdev/usehooks";
 import { useModal } from '@/shared/hooks/useModal';
 import { AppModalDemo } from '@/components/AppModalDemo';
+import { IPropsUtm } from '@/components/AppModalDemo/types';
 
 const FeaturesScreen: React.FC = () => {
+    const utmTags: IPropsUtm = {
+        source: "MM",
+        medium: "organic",
+        campaign: "Демо",
+        content: "Дополнительные возможности",
+    };
+    
     const size = useWindowSize();
 
     const { open, handleToggle, handleClose } = useModal();
@@ -47,7 +55,7 @@ const FeaturesScreen: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <AppModalDemo open={open} handleClose={handleClose} />
+            <AppModalDemo open={open} handleClose={handleClose} utmTags={utmTags} />
         </>
     );
 };

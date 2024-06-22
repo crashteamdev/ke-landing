@@ -4,11 +4,7 @@ import "@/shared/style/style.scss";
 import Header from '@/shared/components/header';
 import Footer from '@/shared/components/footer';
 import Metrics from './metrics';
-import dynamic from 'next/dynamic';
-
-const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
-  ssr: false,
-})
+import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,10 +31,14 @@ export default function RootLayout({
         <meta property="og:description" content="Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на Магнит Маркет"></meta>
       </head>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
-        <Metrics />
+        <Providers>
+          <>
+            <Header />
+            {children}
+            <Footer />
+            <Metrics />
+          </>
+        </Providers>
       </body>
     </html>
   )

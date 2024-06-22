@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './style.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/effect-fade';
@@ -8,6 +8,7 @@ import ArrowIcon from '@/shared/components/icons/arrowIcon';
 import Image from 'next/image';
 import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { type Swiper as SwiperType } from "swiper";
+import { useFeatureFlagVariantKey, usePostHog } from 'posthog-js/react';
 
 interface DataItem {
     count: string;
@@ -74,13 +75,21 @@ const data: DataItem[] = [
 ]
 
 const PresentationSlider: React.FC = () => {
-
+    const [title, setTitle] = useState<string>("Инструменты для продавцов");
+    const posthog = usePostHog();
     const swiperRef = useRef<SwiperType>();
+    // posthog.featureFlags.override({'title-presentation': 'control-two'})
+
+    useEffect(() => {
+        if(posthog.getFeatureFlag('title-presentation') === 'control-two') {
+            setTitle("Инструменты для селлеров");
+        }
+    }, []);
 
     return (
         <div className="presentation-slider" style={{ paddingTop: "100px" }} id="analytics">
             <div className="container">
-                <div className="title">Инструменты для продавцов</div>
+                <div className="title">{title}</div>
                 <Swiper
                     modules={[Pagination, Navigation, EffectFade]}
                     slidesPerView={1}
