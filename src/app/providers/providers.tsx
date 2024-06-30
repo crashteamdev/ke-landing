@@ -1,4 +1,5 @@
 "use client";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
 
@@ -7,6 +8,7 @@ interface IPropsProviders {
 }
 
 export const Providers = ({children}: IPropsProviders) => {
+    const queryClient = new QueryClient();
     if (typeof window !== 'undefined') {
         posthog.init('phc_QhlnZCxS3pf7iwRwlPdlfxvJCurFRoVQPsCHy1mZpBW',
             {
@@ -16,8 +18,10 @@ export const Providers = ({children}: IPropsProviders) => {
         )
     }
     return (
-        <PostHogProvider client={posthog}>
-            {children}
-        </PostHogProvider>
+        <QueryClientProvider client={queryClient}>
+            <PostHogProvider client={posthog}>
+                {children}
+            </PostHogProvider>
+        </QueryClientProvider>
     )
 }

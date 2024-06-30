@@ -9,12 +9,10 @@ import ArrowIcon from '@/shared/components/icons/arrowIcon';
 import { Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import { type Swiper as SwiperTypes } from "swiper";
+import { AppCard } from '@/shared/components/AppCard';
 
 const Posts: React.FC = () => {
     const swiperRef = useRef<SwiperTypes>();
-    const shortenedText = (text:string) => {
-        return text.length > 100 ? text.slice(0, 100) + "..." : text;
-    }
     return (
         <div className="posts-screen overflow-hidden">
             <div className="container">
@@ -55,19 +53,14 @@ const Posts: React.FC = () => {
                 >
                     {posts.map((item, key) => (
                         <SwiperSlide key={key} className="post-item">
-                            <a href={item.link}>
-                                <div className="post-item__img">
-                                    <Image height={229} width={380} src={item.img} alt="" />
-                                </div>
-                                <div className="post-item-content">
-                                    <div className="post-item__title">{item.title}</div>
-                                    <div className="post-item__desc">{shortenedText(item.desc)}</div>
-                                    <div className="post-item-bottom">
-                                        <div className="post-item__date">{item.date}</div>
-                                        <div className="post-item__site">{item.site}</div>
-                                    </div>
-                                </div>
-                            </a>
+                            <AppCard 
+                                title={item.title}
+                                image={item.img}
+                                href={item.link}
+                                desc={item.desc}
+                                date={item.date}
+                                tag={item.site}
+                            />
                         </SwiperSlide>
                     ))}
                 </Swiper>

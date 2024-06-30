@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic'
 
 import MainScreen from '@/module/mainScreen'
+import Header from '@/shared/components/header';
+import Footer from '@/shared/components/footer';
 
 const SubsScreen = dynamic(() => import('@/module/subsScreen'));
 const PresentationSlider = dynamic(() => import('@/module/presentation'));
@@ -18,6 +20,7 @@ const RepricerAbout = dynamic(() => import('@/module/RepricerAbout'));
 export default function Home() {
   return (
     <>
+      <Header />
       <MainScreen />
       <PresentationSlider />
       <ServicesScreen />
@@ -31,6 +34,7 @@ export default function Home() {
       <Posts />
       <Faq />
       <DeveloperScreen />
+      <Footer />
     </>
   )
 }

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import "@/shared/style/style.scss";
-import Header from '@/shared/components/header';
-import Footer from '@/shared/components/footer';
 import Metrics from './metrics';
 import { Providers } from './providers';
 
@@ -33,9 +31,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <>
-            <Header />
             {children}
-            <Footer />
             <Metrics />
           </>
         </Providers>

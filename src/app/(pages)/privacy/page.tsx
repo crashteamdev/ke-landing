@@ -1,6 +1,5 @@
 const Privacy = () => {
     return (
-        <div className="container">
         <div className="write-page-content">
                 <div className="row mb-4">
                 <div className="col">
@@ -751,7 +750,6 @@ const Privacy = () => {
                     </div>
                 </div>
                 </div>
-            </div>
         </div>
     );
 };
