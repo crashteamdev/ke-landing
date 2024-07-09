@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "MarketDB | Политика возврата"
+}
+
 const Policy = () => {
     return (
         <>

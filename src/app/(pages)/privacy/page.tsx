@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "MarketDB | Политика конфиденциальности и обработки данных"
+}
+
 const Privacy = () => {
     return (
         <div className="write-page-content">

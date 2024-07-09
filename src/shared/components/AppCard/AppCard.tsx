@@ -1,6 +1,9 @@
+"use client";
+
 import { shortedText } from '@/shared/utils/shortedText';
 import './style.scss';
 import Image from 'next/image';
+import moment from "moment";
 
 interface IPropsAppCard {
     [key: string]: string;
@@ -22,9 +25,9 @@ export const AppCard = ({
                 </div>
                 <div className="post-item-content">
                     <div className="post-item__title">{title}</div>
-                    <div className="post-item__desc">{shortedText(desc)}</div>
+                    <div className="post-item__desc">{desc}</div>
                     <div className="post-item-bottom">
-                        <div className="post-item__date">{date}</div>
+                        <div className="post-item__date">{moment(date).format("DD.MM.YYYY")}</div>
                         <div className="post-item__site">{tag}</div>
                     </div>
                 </div>
