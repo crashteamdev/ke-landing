@@ -10,20 +10,20 @@ export const metadata: Metadata = {
   title: 'Аналитика маркетплейса Магнит Маркет',
   description: 'Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на KazanExpress/Магнит Маркет',
   keywords: "kazanexpress, KE, ke, KazanExpress, доставка за 1 день, аналитика KazanExpress, Аналитика KazanExpress, KazanExpress Аналитика, Магнит Маркет, Магнит KazanExpress, Магнит, Магнит-Маркет Magnit Market, Magnit-Market, Магнит-маркет аналитика, Магнит маркет аналитика, магнит аналитика, wb аналитика, ozon аналитика, marketdb, аналитика магнит маркет",
-  openGraph: {
-    title: "Аналитика Магнит Маркет",
-    description: 'Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на KazanExpress/Магнит Маркет',
-    url: "https://marketdb.pro/",
-    type: "website",
-    images: [
-      {
-        url: "/images/inform.png",
-        width: 1200,
-        height: 630,
-        alt: "Аналитикика Магнит Маркет",
-      },
-    ],
-  }
+  // openGraph: {
+  //   title: "Аналитика Магнит Маркет",
+  //   description: 'Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на KazanExpress/Магнит Маркет',
+  //   url: "https://marketdb.pro/",
+  //   type: "website",
+  //   // images: [
+  //   //   {
+  //   //     url: "https://marketdb.pro/images/inform.png",
+  //   //     width: 1200,
+  //   //     height: 630,
+  //   //     alt: "Аналитикика Магнит Маркет",
+  //   //   },
+  //   // ],
+  // }
 }
 
 export default function RootLayout({

@@ -19,6 +19,12 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'strapi.marketdb.pro',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'new-retail.ru',
                 port: '',
                 pathname: '/**',

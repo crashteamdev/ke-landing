@@ -36,7 +36,7 @@ export const Blog = () => {
                                 desc={item.attributes.Description}
                                 tag={item.attributes.Tag}
                                 date={item.attributes.Date}
-                                image={`http:/localhost:1337${item.attributes.ImgArticle.data.attributes.formats.medium.url}`}
+                                image={`https://strapi.marketdb.pro${item.attributes.ImgArticle.data.attributes.url}`}
                                 href={`/blog/${item.attributes.slug}`}
                             />
                         ))}
