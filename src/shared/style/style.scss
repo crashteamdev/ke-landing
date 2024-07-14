@@ -354,73 +354,66 @@ body {
 }
 
 .article {
-  width: 100%;
-  max-width: 1000px;
-  margin: 30px auto;
-  font-family: "Roboto", sans-serif;
-  color: #1f1f20;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  // margin-top: 32px;
+  padding-bottom: 32px;
+  width: 880px;
+  color: #000000;
   h1 {
-    font-size: 28px;
-    font-style: normal;
+    margin-top: 64px;
+    margin-bottom: 32px;
+    font-size: 50px;
+    line-height: 1.2;
     font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -0.56px;
   }
   h2 {
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 48px;
-    letter-spacing: -0.44px;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-top: 64px;
+    margin-bottom: 32px;
+    font-weight: 700;
   }
   h3 {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 48px;
-    letter-spacing: -0.36px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    margin-top: 48px;
   }
   p {
-    font-family: "Inter", sans-serif;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    line-height: 1.5;
     font-size: 18px;
-    line-height: 26px;
   }
-  blockquote {
-    color: #4D53E8;
-    font-size: 16px;
-    line-height: 21px;
-    font-weight: 500;
-    padding: 10px 0;
-    padding-left: 20px;
-    border-left: 2px solid #4D53E8;
-  }
-
   ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0 0 1rem;
+    list-style: disc;
     li {
-      color: #3F4455;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      padding-left: 12px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      &::before {
-        content: "";
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: #4D53E8;
-        position: absolute;
-        left: 0;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 1.125rem !important;
+      &::marker {
+        color: #3c7beb;
       }
     }
   }
+  img {
+    border-radius: 16px;
+  }
+  blockquote {
+    padding: 10px;
+    border-left: 3px solid #3c7beb;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 18px;
+    background: #3c7beb0f;
+  }
+  a {
+    color: #3c7beb;
+    font-weight: 700;
+  }
 }
+

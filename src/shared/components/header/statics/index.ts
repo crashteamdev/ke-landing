@@ -8,6 +8,10 @@ export const menuItem = [
         to: "tariff"
     },
     {
+        name: "Блог",
+        to: "blog"
+    },
+    {
         name: "О нас",
         to: "about"
     }

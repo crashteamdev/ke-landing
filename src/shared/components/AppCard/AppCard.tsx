@@ -28,7 +28,7 @@ export const AppCard = ({
                     <div className="post-item__title">{title}</div>
                     <div className="post-item__desc">{desc}</div>
                     <div className="post-item-bottom">
-                        <div className="post-item__date">{moment(new Date(date)).format("DD.MM.YYYY")}</div>
+                        <div className="post-item__date">{date}</div>
                         <div className="post-item__site">{tag}</div>
                     </div>
                 </div>

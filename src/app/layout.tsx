@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Roboto } from 'next/font/google'
 import "@/shared/style/style.scss";
 import Metrics from './metrics';
 import { Providers } from './providers';
 
-const inter = Inter({ subsets: ['latin'] })
+export const roboto = Roboto({
+  subsets: ['latin', 'cyrillic'], // указываем нужные вам наборы символов
+  weight: ['400', '500', '700'], // указываем веса шрифта, которые вы хотите использовать
+});
 
 export const metadata: Metadata = {
   title: 'Аналитика маркетплейса Магнит Маркет',
@@ -42,7 +45,7 @@ export default function RootLayout({
         <meta property="og:title" content="Аналитика маркетплейса Магнит Маркет" />
         <meta property="og:description" content="Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на Магнит Маркет"></meta>
       </head>
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Providers>
           <>
             {children}

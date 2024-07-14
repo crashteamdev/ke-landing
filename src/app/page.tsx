@@ -3,11 +3,12 @@ import dynamic from 'next/dynamic'
 import MainScreen from '@/module/mainScreen'
 import Header from '@/shared/components/header';
 import Footer from '@/shared/components/footer';
+import Posts from '@/module/postsScreen';
 
 const SubsScreen = dynamic(() => import('@/module/subsScreen'));
 const PresentationSlider = dynamic(() => import('@/module/presentation'));
 const ServicesScreen = dynamic(() => import('@/module/services'));
-const Posts = dynamic(() => import('@/module/postsScreen'));
+// const Posts = dynamic(() => import('@/module/postsScreen'));
 const FeaturesScreen = dynamic(() => import('@/module/featuresScreen'));
 const DeveloperScreen = dynamic(() => import('@/module/developerForm'));
 const AboutServicesScreen = dynamic(() => import('@/module/aboutServicesScreen'));
