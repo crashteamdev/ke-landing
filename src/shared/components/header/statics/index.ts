@@ -1,18 +1,22 @@
 export const menuItem = [
     {
         name: "Возможности",
-        to: "analytics"
+        to: "analytics",
+        path: "/",
     },
     {
         name: "Тарифы",
-        to: "tariff"
+        to: "tariff",
+        path: "/",
     },
     {
         name: "Блог",
-        to: "blog"
+        to: "",
+        path: "/blog",
     },
     {
         name: "О нас",
-        to: "about"
+        to: "about",
+        path: "/"
     }
 ]

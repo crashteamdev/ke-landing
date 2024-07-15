@@ -1,4 +1,5 @@
 "use client";
+import { FC } from 'react';
 import Image from 'next/image';
 import { TelegramIcon, VkIcon } from '../icons/socialIcons';
 import './style.scss';
@@ -7,12 +8,40 @@ import PhoneIcon from '../icons/phoneIcon';
 import Link from 'next/link';
 import { menuItem } from '../header/statics';
 import { Link as ScrollLink } from 'react-scroll';
+import { usePathname } from 'next/navigation';
 
 interface IProps {
     footerLayout?: 1 | 2;
 }
 
-const Footer: React.FC = ({ footerLayout }: IProps) => {
+const Footer: FC<IProps> = ({ footerLayout }) => {
+    const pathname = usePathname();
+
+    const renderMenuItem = (item: any, index: number) => {
+        if (pathname === '/' && item.path === '/') {
+            return (
+                <ScrollLink 
+                    key={index}
+                    to={item.to} 
+                    spy={true} 
+                    smooth={true} 
+                    duration={500} 
+                >
+                    {item.name}
+                </ScrollLink>
+            );
+        } else {
+            return (
+                <Link 
+                    key={index}
+                    href={item.path === '/' ? `/#${item.to}` : item.path} 
+                >
+                    {item.name}
+                </Link>
+            );
+        }
+    };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -32,17 +61,7 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                 <div className="footer-bottom">
                     <div className="footer-bottom-menu">
                         <Link className='active' href="/">Главная</Link>
-                        {menuItem.map((item, index) => (
-                            <ScrollLink 
-                                key={index}
-                                to={item.to} 
-                                spy={true} 
-                                smooth={true} 
-                                duration={500} 
-                            >
-                                {item.name}
-                            </ScrollLink>
-                        ))}
+                        {menuItem.map((item, index) => renderMenuItem(item, index))}
                     </div>
                     <div className="footer-bottom-contacts">
                         <a href="mailto:support@marketdb.ru">
@@ -67,7 +86,7 @@ const Footer: React.FC = ({ footerLayout }: IProps) => {
                 </div>
             </div>
         </footer>
-    )
+    );
 };
 
 export default Footer;

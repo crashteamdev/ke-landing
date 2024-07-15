@@ -9,13 +9,42 @@ import CloseIcon from '../icons/close';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 import { menuItem } from './statics';
+import { usePathname } from 'next/navigation';
 
 interface IProps {
     className?: string;
 }
+
 const Header: FC<IProps> = ({ className }) => {
     const [btnLkSite, setBtnLkSite] = useState("Анализировать!");
     const [burger, setBurger] = useState(false);
+
+    const pathname = usePathname();
+
+    const renderMenuItem = (item: any, index: number) => {
+        if (pathname === '/' && item.path === '/') {
+            return (
+                <ScrollLink 
+                    key={index}
+                    to={item.to} 
+                    spy={true} 
+                    smooth={true} 
+                    duration={500} 
+                >
+                    {item.name}
+                </ScrollLink>
+            );
+        } else {
+            return (
+                <Link 
+                    key={index}
+                    href={item.path === '/' ? `/#${item.to}` : item.path} 
+                >
+                    {item.name}
+                </Link>
+            );
+        }
+    };
 
     return (
         <>
@@ -28,17 +57,7 @@ const Header: FC<IProps> = ({ className }) => {
                             </Link>
                             <div className="header-menu">
                                 <Link className='active' href="/">Главная</Link>
-                                {menuItem.map((item, index) => (
-                                    <ScrollLink 
-                                        key={index}
-                                        to={item.to} 
-                                        spy={true} 
-                                        smooth={true} 
-                                        duration={500} 
-                                    >
-                                        {item.name}
-                                    </ScrollLink>
-                                ))}
+                                {menuItem.map((item, index) => renderMenuItem(item, index))}
                             </div>
                         </div>
                         <div className="header-right">
@@ -68,18 +87,7 @@ const Header: FC<IProps> = ({ className }) => {
                             </div>
                             <div className="header-mob-menu-content">
                                 <Link href="/">Главная</Link>
-                                {menuItem.map((item, index) => (
-                                    <ScrollLink 
-                                        key={index}
-                                        to={item.to} 
-                                        spy={true} 
-                                        smooth={true} 
-                                        duration={500}
-                                        onClick={() => setBurger(false)}
-                                    >
-                                        {item.name}
-                                    </ScrollLink>
-                                ))}
+                                {menuItem.map((item, index) => renderMenuItem(item, index))}
                             </div>
                         </div>
                         <div className="header-mob-menu-bottom">
@@ -93,7 +101,7 @@ const Header: FC<IProps> = ({ className }) => {
                 }
             </header>
         </>
-    )
+    );
 };
 
 export default Header;

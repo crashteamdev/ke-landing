@@ -13,21 +13,23 @@ export const metadata: Metadata = {
   title: 'Аналитика маркетплейса Магнит Маркет',
   description: 'Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на KazanExpress/Магнит Маркет',
   keywords: "kazanexpress, KE, ke, KazanExpress, доставка за 1 день, аналитика KazanExpress, Аналитика KazanExpress, KazanExpress Аналитика, Магнит Маркет, Магнит KazanExpress, Магнит, Магнит-Маркет Magnit Market, Magnit-Market, Магнит-маркет аналитика, Магнит маркет аналитика, магнит аналитика, wb аналитика, ozon аналитика, marketdb, аналитика магнит маркет",
-  // openGraph: {
-  //   title: "Аналитика Магнит Маркет",
-  //   description: 'Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на KazanExpress/Магнит Маркет',
-  //   url: "https://marketdb.pro/",
-  //   type: "website",
-  //   // images: [
-  //   //   {
-  //   //     url: "https://marketdb.pro/images/inform.png",
-  //   //     width: 1200,
-  //   //     height: 630,
-  //   //     alt: "Аналитикика Магнит Маркет",
-  //   //   },
-  //   // ],
-  // }
-}
+  openGraph: {
+    locale: "ru_RU",
+    url: "https://marketdb.pro/",
+    siteName: "MarketDB",
+    type: "website",
+    title: "Аналитика маркетплейса Магнит Маркет",
+    description: "Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на Магнит Маркет.",
+    images: [
+      {
+        url: "https://marketdb.pro/images/inform.png",
+        width: 1200,
+        height: 630,
+        alt: "Аналитика Магнит Маркет",
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
@@ -35,24 +37,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru">
-      <head>
-        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
-        <meta property="og:locale" content="ru_RU" />
-        <meta property="og:url" content="https://marketdb.org/" />
-        <meta property="og:site_name" content="MarketDB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Аналитика маркетплейса Магнит Маркет" />
-        <meta property="og:description" content="Анализ продаж конкурентов и поиск прибыльных товаров на маркетплейсах. Находите прибыльные товары и ниши на Магнит Маркет"></meta>
-      </head>
-      <body className={roboto.className}>
-        <Providers>
-          <>
-            {children}
-            <Metrics />
-          </>
-        </Providers>
-      </body>
-    </html>
+    <body className={roboto.className}>
+      <Providers>
+        <>
+          {children}
+          <Metrics />
+        </>
+      </Providers>
+    </body>
   )
 }
