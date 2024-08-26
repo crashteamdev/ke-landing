@@ -37,13 +37,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <body className={roboto.className}>
-      <Providers>
-        <>
-          {children}
-          <Metrics />
-        </>
-      </Providers>
-    </body>
+    <html>
+      <head></head>
+      <body className={roboto.className}>
+        <Providers>
+          <>
+            {children}
+            <Metrics />
+          </>
+        </Providers>
+      </body>
+    </html>
   )
 }
