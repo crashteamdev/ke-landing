@@ -5,6 +5,7 @@ import Header from '@/shared/components/header';
 import Footer from '@/shared/components/footer';
 import Posts from '@/module/postsScreen';
 
+const MixpanelInitializer = dynamic(() => import('@/components/MixpanelInitializer'), { ssr: false });
 const SubsScreen = dynamic(() => import('@/module/subsScreen'));
 const PresentationSlider = dynamic(() => import('@/module/presentation'));
 const ServicesScreen = dynamic(() => import('@/module/services'));
@@ -21,6 +22,7 @@ const RepricerAbout = dynamic(() => import('@/module/RepricerAbout'));
 export default function Home() {
   return (
     <>
+      <MixpanelInitializer />
       <Header />
       <MainScreen />
       <PresentationSlider />
