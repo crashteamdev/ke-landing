@@ -71,10 +71,10 @@ const DeveloperScreen: React.FC = () => {
                                         <MailIcon color="#3C7BEB" />
                                         support@marketdb.ru
                                     </a>
-                                    <a href="tel:+79373735469">
+                                    {/* <a href="tel:+79373735469">
                                         <PhoneIcon color="#3C7BEB" />
                                         +7 937 373 54 69
-                                    </a>
+                                    </a> */}
                                 </div>
                             </div>
                             <Image width={300} height={300} src="/images/developer.png" alt="" />

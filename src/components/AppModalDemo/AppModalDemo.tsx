@@ -104,7 +104,7 @@ export const AppModalDemo = ({open, handleClose, utmTags} :IPropsAppModalDemo) =
                                     <span>Нажимая на кнопку, вы даете <a href="/privacy">согласие на обработку своих персональных данных</a></span>
                                 </div>
                             </form>
-                            {error && <div className='mt-4 text-[red]'>Неизвестная ошибка! <br />Обратитесь в <Link className="underline" target='_blank' rel="noreferrer" href="https://t.me/marketdb_manager">тех.поддержку в Telegram</Link>.</div>}
+                            {error && <div className='mt-4 text-[red]'>Неизвестная ошибка! <br />Обратитесь в <Link className="underline" target='_blank' rel="noreferrer" href="https://t.me/marketdbchat">тех.поддержку в Telegram</Link>.</div>}
                         </>
                     :
                         <div className='flex flex-col justify-center items-center'>

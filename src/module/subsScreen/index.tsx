@@ -44,10 +44,10 @@ const SubsScreen: React.FC = () => {
                 {title: 'История позиций товара'},
                 {title: 'Отчеты в формате Excel по магазинам 10 шт в сутки'},
                 {title: 'Отчеты в формате Excel по категориям 10 шт в сутки'},
-                {
-                    title: 'Сервис автоматического изменения цен',
-                    new: true
-                }
+                // {
+                //     title: 'Сервис автоматического изменения цен',
+                //     new: true
+                // }
             ]
         },
         {
@@ -66,10 +66,10 @@ const SubsScreen: React.FC = () => {
                 {title: 'Магазины продавца'},
                 {title: 'История позиций товара'},
                 {title: 'Отчеты в формате Excel по магазинам (Без ограничений)'},
-                {
-                    title: 'Сервис автоматического изменения цен',
-                    new: true
-                }
+                // {
+                //     title: 'Сервис автоматического изменения цен',
+                //     new: true
+                // }
             ]
         },
         {
@@ -90,10 +90,10 @@ const SubsScreen: React.FC = () => {
                 {title: 'Общая аналитика по магазинам (Без ограничений)'},
                 {title: 'Магазины продавца'},
                 {title: 'Приоритетная поддержка'},
-                {
-                    title: 'Сервис автоматического изменения цен',
-                    new: true
-                }
+                // {
+                //     title: 'Сервис автоматического изменения цен',
+                //     new: true
+                // }
             ]
         },
         {
@@ -114,10 +114,10 @@ const SubsScreen: React.FC = () => {
                 {title: 'Отчеты в формате Excel по магазинам (Без ограничений)'},
                 {title: 'Отчеты в формате Excel по категориям (Без ограничений)'},
                 {title: 'Приоритетная поддержка'},
-                {
-                    title: 'Сервис автоматического изменения цен',
-                    new: true
-                }
+                // {
+                //     title: 'Сервис автоматического изменения цен',
+                //     new: true
+                // }
             ]
         }
     ]
@@ -179,7 +179,7 @@ const SubsScreen: React.FC = () => {
                                     <div className='subs-item-row border-b border-grayModern-400'>
                                         <div className="subs-item__name">
 
-                                            {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>На 5 дней</span>}
+                                            {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>На 3 дня</span>}
                                             
                                             {!item.free && (
                                                 !threeMonth ?

@@ -61,7 +61,7 @@ const Header: FC<IProps> = ({ className }) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            <Link className='header-phone' target='_blank' rel="noreferrer" href="https://t.me/marketdb_manager">
+                            <Link className='header-phone' target='_blank' rel="noreferrer" href="https://t.me/marketdbchat">
                                 <TelegramIcon color="#fff" />
                                 Напишите нам!
                             </Link>
@@ -91,7 +91,7 @@ const Header: FC<IProps> = ({ className }) => {
                             </div>
                         </div>
                         <div className="header-mob-menu-bottom">
-                            <Link target='_blank' rel="noreferrer" href="https://t.me/marketdb_manager" className='header-mob-menu-phone flex items-center gap-1 font-medium'>
+                            <Link target='_blank' rel="noreferrer" href="https://t.me/marketdbchat" className='header-mob-menu-phone flex items-center gap-1 font-medium'>
                                 <TelegramIcon color="black" />
                                 Напишите нам!
                             </Link>
