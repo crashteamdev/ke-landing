@@ -68,10 +68,10 @@ const Footer: FC<IProps> = ({ footerLayout }) => {
                             <MailIcon color='white' />
                             support@marketdb.ru
                         </a>
-                        <a href="tel:+79373735469">
+                        {/* <a href="tel:+79373735469">
                             <PhoneIcon color="white" />
                             +7 937 373 54 69
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>

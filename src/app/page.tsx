@@ -14,10 +14,8 @@ const FeaturesScreen = dynamic(() => import('@/module/featuresScreen'));
 const DeveloperScreen = dynamic(() => import('@/module/developerForm'));
 const AboutServicesScreen = dynamic(() => import('@/module/aboutServicesScreen'));
 const AboutScreen = dynamic(() => import('@/module/about'));
-const SellServices = dynamic(() => import('@/module/SellServices'));
 const Reviews = dynamic(() => import('@/module/Reviews'));
 const Faq = dynamic(() => import('@/module/Faq'));
-const RepricerAbout = dynamic(() => import('@/module/RepricerAbout'));
 
 export default function Home() {
   return (
@@ -29,9 +27,7 @@ export default function Home() {
       <ServicesScreen />
       <AboutServicesScreen />
       <AboutScreen />
-      <SellServices />
       <FeaturesScreen />
-      <RepricerAbout />
       <SubsScreen />
       <Reviews />
       <Posts />

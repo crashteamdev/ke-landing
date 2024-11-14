@@ -44,7 +44,7 @@ const Privacy = () => {
                         данных (далее Политика) применяется ко всей информации, которую
                         Оператор может получить о посетителях веб-сайта&nbsp;
                         <span className="link mark" data-scroll-to="#prefixURL">
-                        https://marketdb.ru/
+                        https://marketdb.pro/
                         </span>
                         .
                     </div>
@@ -69,7 +69,7 @@ const Privacy = () => {
                         а также программ для ЭВМ и баз данных, обеспечивающих их доступность
                         в сети интернет по сетевому адресу&nbsp;
                         <span className="link mark" data-scroll-to="#prefixURL">
-                        https://marketdb.ru/
+                        https://marketdb.pro/
                         </span>
                         .
                     </div>
@@ -107,7 +107,7 @@ const Privacy = () => {
                         косвенно к определенному или определяемому Пользователю
                         веб-сайта&nbsp;
                         <span className="link mark" data-scroll-to="#prefixURL">
-                        https://marketdb.ru/
+                        https://marketdb.pro/
                         </span>
                         .
                     </div>
@@ -123,7 +123,7 @@ const Privacy = () => {
                     <div className="li">
                         2.10. Пользователь любой посетитель веб-сайта&nbsp;
                         <span className="link mark" data-scroll-to="#prefixURL">
-                        https://marketdb.ru/
+                        https://marketdb.pro/
                         </span>
                         .
                     </div>
@@ -441,7 +441,7 @@ const Privacy = () => {
                         &nbsp;предоставление доступа Пользователю к сервисам, информации
                         и/или материалам, содержащимся на веб-сайте&nbsp;
                         <span className="link mark" data-scroll-to="#prefixURL">
-                            https://marketdb.ru/
+                            https://marketdb.pro/
                         </span>
                         .
                         </div>
@@ -508,7 +508,7 @@ const Privacy = () => {
                         случае их заполнения и/или отправки Пользователем самостоятельно
                         через специальные формы, расположенные на сайте&nbsp;
                         <span className="link mark" data-scroll-to="#prefixURL">
-                        https://marketdb.ru/
+                        https://marketdb.pro/
                         </span>
                         &nbsp;или направленные Оператору посредством электронной почты.
                         Заполняя соответствующие формы и/или отправляя свои персональные
@@ -749,7 +749,7 @@ const Privacy = () => {
                         className="link mark"
                         data-scroll-to="#prefixURLLink"
                         >
-                        https://marketdb.ru/privacy/
+                        https://marketdb.pro/privacy/
                         </span>
                         .
                     </div>

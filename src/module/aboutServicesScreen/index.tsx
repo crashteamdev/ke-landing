@@ -16,8 +16,8 @@ const AboutServicesScreen: React.FC = () => {
                         <Image fill src="/images/pc.png" alt="" />
                     </div>
                     <div className='about-services-screen-column'>
-                        <div className="title">Для кого  подходит сервис?</div>
-                        <div className="tabs">
+                        <div className="title">Для кого подходит сервис?</div>
+                        {/* <div className="tabs">
                             <div className={activeTab === "tabs1" ? "active tabs-item" : "tabs-item"} onClick={() => setActiveTab('tabs1')}>
                                 <span>Новичок</span>
                             </div>
@@ -27,7 +27,7 @@ const AboutServicesScreen: React.FC = () => {
                             <div className={activeTab === "tabs3" ? "active tabs-item" : "tabs-item"} onClick={() => setActiveTab('tabs3')}>
                                 <span>Крупному бизнесу</span>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="about-services-list">
                             {activeTab === "tabs1" && (
                                 <>
@@ -36,8 +36,8 @@ const AboutServicesScreen: React.FC = () => {
                                             <Image width={26} height={26} src="/images/icon/about-services.svg" alt="" />
                                         </div>
                                         <div className="about-services-item-content">
-                                            <div className="about-services-item__title">Проанализировать нишу</div>
-                                            <div className="about-services-item__desc">Определиться с товарами, которые будут продаваться</div>
+                                            <div className="about-services-item__title">Для новичков</div>
+                                            <div className="about-services-item__desc">Определиться с товарами для первых поставок, изучить рынок</div>
                                         </div>
                                     </div>
                                     <div className="about-services-item">
@@ -45,8 +45,8 @@ const AboutServicesScreen: React.FC = () => {
                                             <Image width={26} height={26} src="/images/icon/about-services-1.svg" alt="" />
                                         </div>
                                         <div className="about-services-item-content">
-                                            <div className="about-services-item__title">Гибкие тарифные планы</div>
-                                            <div className="about-services-item__desc">Для легкого старта можно  подобрать тот тариф который дейсвительно нужен.</div>
+                                            <div className="about-services-item__title">Для менеджеров</div>
+                                            <div className="about-services-item__desc">Изучайте спрос и товары конкурентов, чтоб сделать магазины клиентов прибыльнее!</div>
                                         </div>
                                     </div>
                                     <div className="about-services-item">
@@ -54,8 +54,8 @@ const AboutServicesScreen: React.FC = () => {
                                             <Image width={26} height={26} src="/images/icon/about-services-2.svg" alt="" />
                                         </div>
                                         <div className="about-services-item-content">
-                                            <div className="about-services-item__title">Низкая цена</div>
-                                            <div className="about-services-item__desc">Доступная цена для старта на маркетплейсах.</div>
+                                            <div className="about-services-item__title">Владельцы производств</div>
+                                            <div className="about-services-item__desc">С легкостью выходите на рынок, сделав предварительный анализ</div>
                                         </div>
                                     </div>
                                     <div className="about-services-item">
@@ -63,8 +63,8 @@ const AboutServicesScreen: React.FC = () => {
                                             <Image width={26} height={26} src="/images/icon/about-services-3.svg" alt="" />
                                         </div>
                                         <div className="about-services-item-content">
-                                            <div className="about-services-item__title">Точечный анализ товаров</div>
-                                            <div className="about-services-item__desc">Легко проанализировать конкретный товар через расширение.</div>
+                                            <div className="about-services-item__title">Бывалые продавцы</div>
+                                            <div className="about-services-item__desc">Поддерживайте ассортимент товаров и держите конкурентов на короткой дистанции</div>
                                         </div>
                                     </div>
                                 </>

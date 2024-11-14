@@ -14,25 +14,21 @@ const AboutScreen: React.FC = () => {
                         </div>
                     </div>
                     <div className='about-screen-number'>
-                        <div>
-                            <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>3 млн +</div>
-                                <div className='about-screen-number-item__desc'>Товаров ежедневно<br />анализируется</div>
-                            </div>
-                            <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>+ 7 тыс</div>
-                                <div className='about-screen-number-item__desc'>Клиентов уже воспользовались<br /> аналитикой Marketdb</div>
-                            </div>
+                        <div className="about-screen-number-item">
+                            <div className='about-screen-number-item__title'>3 млн</div>
+                            <div className='about-screen-number-item__desc'>Товаров ежедневно<br />анализируется</div>
                         </div>
-                        <div>
-                            <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>61,5%</div>
-                                <div className='about-screen-number-item__desc'>Средний рост выручки</div>
-                            </div>
-                            <div className="about-screen-number-item">
-                                <div className='about-screen-number-item__title'>10 тыс +</div>
-                                <div className='about-screen-number-item__desc'>Категорий ежедневно<br />собираем</div>
-                            </div>
+                        <div className="about-screen-number-item">
+                            <div className='about-screen-number-item__title'>7 тыс</div>
+                            <div className='about-screen-number-item__desc'>Клиентов уже воспользовались<br /> аналитикой Marketdb</div>
+                        </div>
+                        <div className="about-screen-number-item">
+                            <div className='about-screen-number-item__title'>61,5%</div>
+                            <div className='about-screen-number-item__desc'>Средний рост выручки</div>
+                        </div>
+                        <div className="about-screen-number-item">
+                            <div className='about-screen-number-item__title'>10 тыс</div>
+                            <div className='about-screen-number-item__desc'>Категорий ежедневно<br />собираем</div>
                         </div>
                     </div>
                 </div>

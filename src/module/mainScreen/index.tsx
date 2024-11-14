@@ -18,9 +18,9 @@ const MainScreen: React.FC = () => {
                 <div className="container relative z-[1]">
                     <div className="row main-screen-row">
                         <div>
-                            <div className="main-screen-title">Аналитика Магнит Маркет</div>
+                            <div className="main-screen-title">Аналитика Магнит Маркет и Uzum</div>
                             <div className="main-screen-desc">
-                                Самая большая и точная аналитика для Магнит Маркет. А так же сервис для работы с ценами на товары - автоизменение цен.
+                                Самая большая и точная аналитика для Магнит Маркет и Uzum по доступной цене!
                             </div>
                             <div className="main-screen-btn-list">
                                 <Link href={""} onClick={() => handleToggle()} className='btn btn--orange'>Попробовать бесплатно</Link>
@@ -44,7 +44,7 @@ const MainScreen: React.FC = () => {
                             placeholder="blur" 
                             fill className='' 
                             src="/images/inform.png" 
-                            alt="Аналитика Магнит Маркет" 
+                            alt="Аналитика Магнит Маркет и Uzum" 
                         />
                     </div>
                 </div>
