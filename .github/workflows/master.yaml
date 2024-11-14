@@ -23,12 +23,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'pnpm'
       - name: Install Packages
-        run: npm install
+        run: pnpm install
         shell: bash
       - name: Build
-        run: npm run build
+        run: pnpm run build
       - name: Deploy image
         uses: valitydev/action-deploy-docker@v1.0.16
         with:
