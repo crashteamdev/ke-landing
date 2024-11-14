@@ -24,9 +24,10 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install Packages
         run: pnpm install
-        shell: bash
       - name: Build
         run: pnpm run build
       - name: Deploy image
@@ -35,5 +36,3 @@ jobs:
           registry-username: ${{ github.actor }}
           registry-access-token: ${{ secrets.GITHUB_TOKEN }}
           dockerfile-path: .
-        env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
