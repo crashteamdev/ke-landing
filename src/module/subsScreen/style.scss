@@ -1,6 +1,6 @@
 .subs-screen {
   // background: linear-gradient(107.49deg, #203252 -0.68%, #79a9fe 100.79%);
-  background: #061C3D;
+  background: #061c3d;
   padding-top: 100px;
   padding-bottom: 112px;
   @media (max-width: 992px) {
@@ -54,6 +54,9 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      &.active {
+        border: 2px solid #ed8226;
+      }
       &-row {
         margin-bottom: 20px;
         padding-bottom: 10px;
@@ -70,6 +73,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      &__badge {
+        position: absolute;
+        left: 15px;
+        top: -15px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 4px 15px;
+        color: #fff;
+        background: linear-gradient(107.49deg, #fb943c -0.68%, #d46200 100.79%);
       }
       &__title {
         font-style: normal;

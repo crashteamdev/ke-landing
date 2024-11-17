@@ -20,6 +20,7 @@ interface DataItem {
     diccountMath: number;
     free: boolean;
     list: ListItem[],
+    badge: boolean
 }
 
 const SubsScreen: React.FC = () => {
@@ -35,6 +36,7 @@ const SubsScreen: React.FC = () => {
             months: threeMonth ? 3 : '',
             diccountMath: 0,
             free: true,
+            badge: false,
             list: [
                 {title: 'Доступ к расширению'},
                 {title: '30 дней периода аналитики'},
@@ -53,8 +55,9 @@ const SubsScreen: React.FC = () => {
         {
             title: "Базовый",
             desc: "Тариф подходит для начинающих продавцов",
-            price: 1470,
+            price: 1990,
             discount: 10,
+            badge: false,
             diccountMath: 0.10,
             free: false,
             months: threeMonth ? 3 : '',
@@ -75,8 +78,9 @@ const SubsScreen: React.FC = () => {
         {
             title: "Расширенный",
             desc: "Тариф используют уже действующие продавцы для улучшения ассортимента",
-            price: 2190,
+            price: 2590,
             discount: 15,
+            badge: true,
             diccountMath: 0.15,
             free: false,
             months: threeMonth ? 3 : '',
@@ -97,9 +101,10 @@ const SubsScreen: React.FC = () => {
             ]
         },
         {
+            badge: false,
             title: "Продвинутый",
             desc: "Максимальный тариф для продвинутых продавцов",
-            price: 3200,
+            price: 3290,
             discount: 20,
             diccountMath: 0.20,
             free: false,
@@ -168,7 +173,12 @@ const SubsScreen: React.FC = () => {
                         }}
                     >
                         {data.map((item, key) => (
-                            <SwiperSlide key={key} className="subs-item">
+                            <SwiperSlide key={key} className={`subs-item ${item.badge ? "active" : ""}`}>
+                                {item.badge && 
+                                    <div className="subs-item__badge">
+                                        Популярное
+                                    </div>
+                                }
                                 <div>
                                     <div className="subs-item__title">
                                         {item.title}
@@ -179,7 +189,7 @@ const SubsScreen: React.FC = () => {
                                     <div className='subs-item-row border-b border-grayModern-400'>
                                         <div className="subs-item__name">
 
-                                            {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath)) - 1) : item.price} ₽</span> : <span>На 3 дня</span>}
+                                            {!item.free ? <span>{threeMonth ? Math.round((item.price * 3 - (item.price * 3 * item.diccountMath))) : item.price} ₽</span> : <span>На 3 дня</span>}
                                             
                                             {!item.free && (
                                                 !threeMonth ?
