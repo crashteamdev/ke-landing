@@ -4,7 +4,6 @@ import MainScreen from '@/module/mainScreen'
 import Header from '@/shared/components/header';
 import Footer from '@/shared/components/footer';
 import Posts from '@/module/postsScreen';
-import {usePostHog} from "posthog-js/react";
 
 const SubsScreen = dynamic(() => import('@/module/subsScreen'));
 const PresentationSlider = dynamic(() => import('@/module/presentation'));
@@ -18,8 +17,6 @@ const Reviews = dynamic(() => import('@/module/Reviews'));
 const Faq = dynamic(() => import('@/module/Faq'));
 
 export default function Home() {
-  const posthog = usePostHog();
-  posthog.capture('landing_page_visited', { page: 'landing', isNewUser: !posthog.get_distinct_id() })
   return (
     <>
       <Header />
