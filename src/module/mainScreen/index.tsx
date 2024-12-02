@@ -8,9 +8,11 @@ import { useModal } from '@/shared/hooks/useModal';
 import './style.scss';
 import { AppModalDemo } from '@/components/AppModalDemo';
 import { Link as ScrollLink } from 'react-scroll';
+import {usePostHog} from "posthog-js/react";
 
 const MainScreen: React.FC = () => {
-
+    const posthog = usePostHog();
+    posthog.capture('landing_page_visited', { page: 'landing', isNewUser: !posthog.get_distinct_id() })
     const { open, handleToggle, handleClose } = useModal();
     return (
         <>
