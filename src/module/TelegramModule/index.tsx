@@ -8,7 +8,7 @@ export const TelegramModule = () => {
                 <div>
                     <div className="title text-center">Бесплатный Telegram Бот 🤖</div>
                     <div className="desc text-center">Мы разработали бесплатный Telegram Бот для наших клиентов,<br />бот интегрируется с личным кабинетом Магнит Маркет. </div>
-                    <Link href="https://t.meMarketDBAnalyticsBot" target="_blank" className="btn btn--orange block w-full max-w-[195px] mt-4 mx-auto">Воспользоваться</Link>
+                    <Link href="https://t.me/MarketDBAnalyticsBot" target="_blank" className="btn btn--orange block w-full max-w-[195px] mt-4 mx-auto">Воспользоваться</Link>
                 </div>
                 <div className="grid grid-cols-1">
                     <div>
