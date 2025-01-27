@@ -19,7 +19,7 @@ export const AppCard = ({
     tag,
 }: IPropsAppCard) => {
     return (
-        <div className="post-item">
+        <div className="post-item flex-1">
             <a href={href}>
                 <div className="post-item__img">
                     <Image height={229} width={380} src={image} alt="" />

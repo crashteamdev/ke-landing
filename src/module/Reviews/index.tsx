@@ -44,11 +44,11 @@ const Reviews = () => {
                     }}
                 >
                     {reviews.map((item, key) => (
-                        <SwiperSlide key={key} className="">
-                            <div className='rounded-[24px] p-[40px] bg-[#fff] flex flex-col gap-[24px] h-['>
+                        <SwiperSlide key={key} className="flex-auto max-lg:flex-none">
+                            <div className='rounded-[24px] p-[40px] bg-[#fff] flex flex-col gap-[24px] h-full'>
                                 <div className='flex gap-[12px]'>
-                                    <div className='relative w-[48px] h-[48px] rounded-full overflow-hidden'>
-                                        <Image className='object-cover' src={item.sellerPhoto} fill alt={"Отзыв MarketDB от " + item.sellerName} />
+                                    <div className='relative w-[48px] h-[48px] rounded-full overflow-hidden flex'>
+                                        <Image className='object-cover flex-auto' src={item.sellerPhoto} fill alt={"Отзыв MarketDB от " + item.sellerName} />
                                     </div>
                                     <div className='flex flex-col gap-[4px]'>
                                         <div className='text-[#1a1a1a] text-[16px] leading-[24px] font-medium'>{item.sellerName}</div>

@@ -4,6 +4,7 @@ import MainScreen from '@/module/mainScreen'
 import Header from '@/shared/components/header';
 import Footer from '@/shared/components/footer';
 import Posts from '@/module/postsScreen';
+import { TelegramModule } from '@/module/TelegramModule';
 
 const SubsScreen = dynamic(() => import('@/module/subsScreen'));
 const PresentationSlider = dynamic(() => import('@/module/presentation'));
@@ -21,6 +22,7 @@ export default function Home() {
     <>
       <Header />
       <MainScreen />
+      <TelegramModule />
       <PresentationSlider />
       <ServicesScreen />
       <AboutServicesScreen />
