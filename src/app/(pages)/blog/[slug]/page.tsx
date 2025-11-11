@@ -21,16 +21,28 @@ interface BlogArticleProps {
   };
 }
 
+const normalize = (item: any): Article => {
+  const attrs = item?.attributes ?? item ?? {};
+  return {
+    id: String(item?.id ?? item?.documentId ?? attrs?.id ?? ''),
+    attributes: {
+      Title: attrs.Title,
+      Content: attrs.Content,
+      Description: attrs.Description,
+      Keywords: attrs.Keywords,
+      OgImage: attrs.OgImage,
+    },
+  };
+};
+
 const fetchArticle = async (slug: string): Promise<Article> => {
-  const url = `/articles?filters[slug][$eq]=${slug}`;
-  const response = await axiosApi.get<{ data: Article[] }>(url);
-  const article = response.data.data[0];
-  
-  if (!article) {
+  const url = `/articles?filters[slug][$eq]=${slug}&populate=*&status=published`;
+  const response = await axiosApi.get<{ data: any[] }>(url);
+  const raw = Array.isArray(response.data?.data) ? response.data.data[0] : null;
+  if (!raw) {
     throw new Error('Article not found');
   }
-
-  return article;
+  return normalize(raw);
 };
 
 export const generateMetadata = async ({ params }: BlogArticleProps): Promise<Metadata> => {
