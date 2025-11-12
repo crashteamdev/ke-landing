@@ -2,6 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { axiosApi } from "@/shared/api/axios";
 import { SITE_SLUG } from "@/shared/config";
+import { getSiteDocumentId } from "@/shared/api/site";
 
 export interface ArticleAttributes {
   Title: string;
@@ -31,13 +32,27 @@ const normalize = (item: any): Article => {
 };
 
 const getArticle = async (slug: string): Promise<Article> => {
-  const url = `/articles?filters[slug][$eq]=${slug}&filters[site][slug][$eq]=${SITE_SLUG}&populate=*&status=published`;
-  const response = await axiosApi.get<{ data: any[] }>(url);
-  const raw = Array.isArray(response.data?.data) ? response.data.data[0] : null;
-  if (!raw) {
-    throw new Error("Article not found");
+  const siteDocId = await getSiteDocumentId();
+  const filteredUrl = siteDocId
+    ? `/articles?filters[slug][$eq]=${slug}&filters[site][documentId][$eq]=${siteDocId}&populate=*&publicationState=live`
+    : `/articles?filters[slug][$eq]=${slug}&populate=*&publicationState=live`;
+
+  try {
+    const response = await axiosApi.get<{ data: any[] }>(filteredUrl);
+    const raw = Array.isArray(response.data?.data) ? response.data.data[0] : null;
+    if (!raw) {
+      throw new Error("Article not found");
+    }
+    return normalize(raw);
+  } catch (e: any) {
+    const fallbackUrl = `/articles?filters[slug][$eq]=${slug}&populate=*&publicationState=live`;
+    const response = await axiosApi.get<{ data: any[] }>(fallbackUrl);
+    const raw = Array.isArray(response.data?.data) ? response.data.data[0] : null;
+    if (!raw) {
+      throw new Error("Article not found");
+    }
+    return normalize(raw);
   }
-  return normalize(raw);
 };
 
 export const useArticle = (slug: string) => {

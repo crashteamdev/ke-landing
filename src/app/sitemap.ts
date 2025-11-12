@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { axiosApi } from '@/shared/api/axios';
 import { SITE_SLUG } from '@/shared/config';
+import { getSiteDocumentId } from '@/shared/api/site';
 
 interface Article {
   id: string;
@@ -12,7 +13,10 @@ interface Article {
 
 async function getArticles(): Promise<Article[]> {
   try {
-    const url = `/articles?filters[site][slug][$eq]=${SITE_SLUG}&fields[0]=slug&fields[1]=updatedAt&status=published`;
+    const siteDocId = await getSiteDocumentId();
+    const url = siteDocId
+      ? `/articles?filters[site][documentId][$eq]=${siteDocId}&fields[0]=slug&fields[1]=updatedAt&publicationState=live`
+      : `/articles?fields[0]=slug&fields[1]=updatedAt&publicationState=live`;
     const response = await axiosApi.get<{ data: any[] }>(url);
     return Array.isArray(response.data?.data) ? response.data.data : [];
   } catch (error) {

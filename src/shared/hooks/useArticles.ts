@@ -2,6 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { axiosApi } from "@/shared/api/axios";
 import { SITE_SLUG } from "@/shared/config";
+import { getSiteDocumentId } from "@/shared/api/site";
 
 type LegacyImageData = { attributes: { url: string | null } | null } | null;
 export interface ArticleAttributes {
@@ -47,10 +48,23 @@ const normalizeArticle = (item: any): Article => {
 };
 
 const getArticles = async (): Promise<Article[]> => {
-  const url = `/articles?filters[site][slug][$eq]=${SITE_SLUG}&populate=*&status=published`;
-  const response = await axiosApi.get<{ data: any[] }>(url);
-  const list = Array.isArray(response.data?.data) ? response.data.data : [];
-  return list.map(normalizeArticle);
+  // Try filtering by relation documentId (Strapi v5)
+  const siteDocId = await getSiteDocumentId();
+  const filteredUrl = siteDocId
+    ? `/articles?filters[site][documentId][$eq]=${siteDocId}&populate=*&publicationState=live`
+    : `/articles?populate=*&publicationState=live`;
+
+  try {
+    const response = await axiosApi.get<{ data: any[] }>(filteredUrl);
+    const list = Array.isArray(response.data?.data) ? response.data.data : [];
+    return list.map(normalizeArticle);
+  } catch (e: any) {
+    // Fallback: try without site filter if backend rejects relation filter
+    const fallbackUrl = `/articles?populate=*&publicationState=live`;
+    const response = await axiosApi.get<{ data: any[] }>(fallbackUrl);
+    const list = Array.isArray(response.data?.data) ? response.data.data : [];
+    return list.map(normalizeArticle);
+  }
 };
 
 export const useArticles = () => {
