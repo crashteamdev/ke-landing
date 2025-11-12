@@ -1,6 +1,7 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import { axiosApi } from "@/shared/api/axios";
+import { SITE_SLUG } from "@/shared/config";
 
 type LegacyImageData = { attributes: { url: string | null } | null } | null;
 export interface ArticleAttributes {
@@ -46,7 +47,7 @@ const normalizeArticle = (item: any): Article => {
 };
 
 const getArticles = async (): Promise<Article[]> => {
-  const url = `/articles?populate=*&status=published`;
+  const url = `/articles?filters[site][slug][$eq]=${SITE_SLUG}&populate=*&status=published`;
   const response = await axiosApi.get<{ data: any[] }>(url);
   const list = Array.isArray(response.data?.data) ? response.data.data : [];
   return list.map(normalizeArticle);
